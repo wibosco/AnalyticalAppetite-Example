@@ -8,9 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		24396E11096D93B0ED8751A0 /* Pods_AnalyticalAppetite_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */; };
+		31457B0AE9F0348555835909 /* Pods_AnalyticalAppetite_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EA03D08E9897DDA8FD360F /* Pods_AnalyticalAppetite_ExampleTests.framework */; };
 		911E18ED1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */; };
 		911E18EF1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */; };
-		91F981081D9EBCA0004C31B6 /* AnalyticalAppetite_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981071D9EBCA0004C31B6 /* AnalyticalAppetite_ExampleTests.swift */; };
+		911E18F31DA1BBEA00A8AD59 /* FeedAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18F21DA1BBEA00A8AD59 /* FeedAnalyticalRegistryTests.swift */; };
+		911E18F51DA1BC2200A8AD59 /* ProfileAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18F41DA1BC2200A8AD59 /* ProfileAnalyticalRegistryTests.swift */; };
+		911E18F71DA1BC3200A8AD59 /* SettingsAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18F61DA1BC3200A8AD59 /* SettingsAnalyticalRegistryTests.swift */; };
+		911E18FD1DA1C30200A8AD59 /* AnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18FB1DA1BF0100A8AD59 /* AnalyticalRegistry.swift */; };
+		911E18FE1DA1C30300A8AD59 /* AnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18FB1DA1BF0100A8AD59 /* AnalyticalRegistry.swift */; };
+		911E18FF1DA1C30900A8AD59 /* FeedAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */; };
+		911E19021DA1C34400A8AD59 /* AnalyticsDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E19011DA1C34400A8AD59 /* AnalyticsDelegateSpy.swift */; };
+		911E19031DA1C37A00A8AD59 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */; };
+		911E19051DA1C5E800A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */; };
+		911E19061DA1C5EB00A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */; };
 		91F981211D9EBD44004C31B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981131D9EBD44004C31B6 /* AppDelegate.swift */; };
 		91F981231D9EBD44004C31B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F981161D9EBD44004C31B6 /* Assets.xcassets */; };
 		91F981241D9EBD44004C31B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F981181D9EBD44004C31B6 /* LaunchScreen.storyboard */; };
@@ -32,12 +42,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06AD35AA4B580569B15D4EEA /* Pods-AnalyticalAppetite-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		581320B53CF0CFE5FE68CFD4 /* Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticalAppetite_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAnalyticalRegistry.swift; sourceTree = "<group>"; };
 		911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsAnalyticalRegistry.swift; sourceTree = "<group>"; };
+		911E18F21DA1BBEA00A8AD59 /* FeedAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
+		911E18F41DA1BC2200A8AD59 /* ProfileAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
+		911E18F61DA1BC3200A8AD59 /* SettingsAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
+		911E18FB1DA1BF0100A8AD59 /* AnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticalRegistry.swift; sourceTree = "<group>"; };
+		911E19011DA1C34400A8AD59 /* AnalyticsDelegateSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsDelegateSpy.swift; sourceTree = "<group>"; };
 		91F980ED1D9EBCA0004C31B6 /* AnalyticalAppetite-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnalyticalAppetite-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F981031D9EBCA0004C31B6 /* AnalyticalAppetite-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnalyticalAppetite-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		91F981071D9EBCA0004C31B6 /* AnalyticalAppetite_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticalAppetite_ExampleTests.swift; sourceTree = "<group>"; };
 		91F981091D9EBCA0004C31B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91F981131D9EBD44004C31B6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91F981141D9EBD44004C31B6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +64,7 @@
 		91F981201D9EBD44004C31B6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAnalyticalRegistry.swift; sourceTree = "<group>"; };
+		C5EA03D08E9897DDA8FD360F /* Pods_AnalyticalAppetite_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticalAppetite_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDF6948D13BDEC8D3FC6850 /* Pods-AnalyticalAppetite-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-Example/Pods-AnalyticalAppetite-Example.release.xcconfig"; sourceTree = "<group>"; };
 		FEE382880273CF8A38719C77 /* Pods-AnalyticalAppetite-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-Example/Pods-AnalyticalAppetite-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31457B0AE9F0348555835909 /* Pods_AnalyticalAppetite_ExampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +94,45 @@
 			children = (
 				FEE382880273CF8A38719C77 /* Pods-AnalyticalAppetite-Example.debug.xcconfig */,
 				CDDF6948D13BDEC8D3FC6850 /* Pods-AnalyticalAppetite-Example.release.xcconfig */,
+				581320B53CF0CFE5FE68CFD4 /* Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig */,
+				06AD35AA4B580569B15D4EEA /* Pods-AnalyticalAppetite-ExampleTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		911E18F01DA1BBBE00A8AD59 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				911E18F11DA1BBBE00A8AD59 /* Registries */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		911E18F11DA1BBBE00A8AD59 /* Registries */ = {
+			isa = PBXGroup;
+			children = (
+				911E19001DA1C32B00A8AD59 /* Spy */,
+				911E18F21DA1BBEA00A8AD59 /* FeedAnalyticalRegistryTests.swift */,
+				911E18F41DA1BC2200A8AD59 /* ProfileAnalyticalRegistryTests.swift */,
+				911E18F61DA1BC3200A8AD59 /* SettingsAnalyticalRegistryTests.swift */,
+			);
+			path = Registries;
+			sourceTree = "<group>";
+		};
+		911E18FA1DA1BF0100A8AD59 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				911E18FB1DA1BF0100A8AD59 /* AnalyticalRegistry.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		911E19001DA1C32B00A8AD59 /* Spy */ = {
+			isa = PBXGroup;
+			children = (
+				911E19011DA1C34400A8AD59 /* AnalyticsDelegateSpy.swift */,
+			);
+			path = Spy;
 			sourceTree = "<group>";
 		};
 		91F980E41D9EBCA0004C31B6 = {
@@ -114,7 +169,7 @@
 		91F981061D9EBCA0004C31B6 /* AnalyticalAppetite-ExampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				91F981071D9EBCA0004C31B6 /* AnalyticalAppetite_ExampleTests.swift */,
+				911E18F01DA1BBBE00A8AD59 /* Tests */,
 				91F981091D9EBCA0004C31B6 /* Info.plist */,
 			);
 			path = "AnalyticalAppetite-ExampleTests";
@@ -184,6 +239,7 @@
 		91F9812B1D9EC69E004C31B6 /* Registries */ = {
 			isa = PBXGroup;
 			children = (
+				911E18FA1DA1BF0100A8AD59 /* Base */,
 				91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */,
 				911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */,
 				911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */,
@@ -196,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */,
+				C5EA03D08E9897DDA8FD360F /* Pods_AnalyticalAppetite_ExampleTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -227,9 +284,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91F9810F1D9EBCA0004C31B6 /* Build configuration list for PBXNativeTarget "AnalyticalAppetite-ExampleTests" */;
 			buildPhases = (
+				E68CB309E58D0B60CD434049 /* [CP] Check Pods Manifest.lock */,
 				91F980FF1D9EBCA0004C31B6 /* Sources */,
 				91F981001D9EBCA0004C31B6 /* Frameworks */,
 				91F981011D9EBCA0004C31B6 /* Resources */,
+				32590B10EE6DA0B49BBBAA88 /* [CP] Embed Pods Frameworks */,
+				E244440DD516A260FFCFA124 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,6 +362,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		32590B10EE6DA0B49BBBAA88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		81BDD26720D3CE3D5FE1A65A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -347,6 +422,36 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		E244440DD516A260FFCFA124 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E68CB309E58D0B60CD434049 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -360,6 +465,7 @@
 				91F981211D9EBD44004C31B6 /* AppDelegate.swift in Sources */,
 				911E18EF1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */,
 				91F981261D9EBD44004C31B6 /* FirstViewController.swift in Sources */,
+				911E18FE1DA1C30300A8AD59 /* AnalyticalRegistry.swift in Sources */,
 				911E18ED1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,7 +474,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91F981081D9EBCA0004C31B6 /* AnalyticalAppetite_ExampleTests.swift in Sources */,
+				911E19021DA1C34400A8AD59 /* AnalyticsDelegateSpy.swift in Sources */,
+				911E19031DA1C37A00A8AD59 /* AnalyticsManager.swift in Sources */,
+				911E19061DA1C5EB00A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */,
+				911E18FF1DA1C30900A8AD59 /* FeedAnalyticalRegistry.swift in Sources */,
+				911E18F51DA1BC2200A8AD59 /* ProfileAnalyticalRegistryTests.swift in Sources */,
+				911E18F31DA1BBEA00A8AD59 /* FeedAnalyticalRegistryTests.swift in Sources */,
+				911E18FD1DA1C30200A8AD59 /* AnalyticalRegistry.swift in Sources */,
+				911E19051DA1C5E800A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */,
+				911E18F71DA1BC3200A8AD59 /* SettingsAnalyticalRegistryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,12 +634,15 @@
 		};
 		91F981101D9EBCA0004C31B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 581320B53CF0CFE5FE68CFD4 /* Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "AnalyticalAppetite-ExampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "boles.AnalyticalAppetite-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnalyticalAppetite-Example.app/AnalyticalAppetite-Example";
 			};
@@ -533,8 +650,10 @@
 		};
 		91F981111D9EBCA0004C31B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06AD35AA4B580569B15D4EEA /* Pods-AnalyticalAppetite-ExampleTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "AnalyticalAppetite-ExampleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "boles.AnalyticalAppetite-ExampleTests";

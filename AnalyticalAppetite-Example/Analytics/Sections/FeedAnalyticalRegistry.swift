@@ -8,53 +8,45 @@
 
 import Foundation
 
-class FeedAnalyticalRegistry: NSObject {
+class FeedAnalyticalRegistry: AnalyticalRegistry {
     
-    // MARK: Events
+    // MARK: - Events
     
     let postOpenedEventName = "Post Opened"
     let postLikeEventName = "Post Liked"
     let postSharedEventName = "Post Shared"
     let feedScrolledEventName = "Feed Scrolled"
     
-    // MARK: Parameters
+    // MARK: - Parameters
     
     let postLikePropertyName = "Liked"
     let postSharedPropertyName = "Shared"
     
-    // MARK: Singleton
-    
-    static let sharedInstance = FeedAnalyticalRegistry()
-    
-    // MARK: Properties
-    
-    var delegate: AnalyticsDelegate?
-    
-    // MARK: Post
+    // MARK: - Post
     
     func sendPostOpenedEvent() {
-        delegate?.sendEvent(postOpenedEventName, properties: nil)
+        delegate.sendEvent(postOpenedEventName)
     }
     
     func sendLikeEvent(like: Bool) {
         let properties = [postLikePropertyName: like]
         
-        delegate?.sendEvent(postLikeEventName, properties: properties)
+        delegate.sendEvent(postLikeEventName, properties: properties)
     }
     
     func sendSharedEvent(shared: Bool) {
         let properties = [postSharedPropertyName: shared]
         
-        delegate?.sendEvent(postSharedEventName, properties: properties)
+        delegate.sendEvent(postSharedEventName, properties: properties)
     }
     
-    // MARK: Scrolling
+    // MARK: - Scrolling
     
     func startedScrollingFeedEvent() {
-        delegate?.startTimedEvent(feedScrolledEventName)
+        delegate.startTimedEvent(feedScrolledEventName)
     }
     
     func sendScrolledFeedEvent() {
-        delegate?.sendEvent(feedScrolledEventName)
+        delegate.sendEvent(feedScrolledEventName)
     }
 }

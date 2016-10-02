@@ -17,28 +17,33 @@ protocol AnalyticsDelegate: class {
 
 class AnalyticsManager: NSObject, AnalyticsDelegate {
 
-    // MARK: Properties
+    // MARK: - Properties
     
     let mixpanel = Mixpanel.sharedInstance()
     
-    let feedAnalyticalRegistry: FeedAnalyticalRegistry
-    let profileAnalyticalRegistry: ProfileAnalyticalRegistry
+    lazy var feedAnalyticalRegistry: FeedAnalyticalRegistry = {
+        let feedAnalyticalRegistry = FeedAnalyticalRegistry(delegate: self)
+        
+        return feedAnalyticalRegistry
+    }()
     
-    // MARK: Init
+    lazy var profileAnalyticalRegistry: ProfileAnalyticalRegistry = {
+        let profileAnalyticalRegistry = ProfileAnalyticalRegistry(delegate: self)
+        
+        return profileAnalyticalRegistry
+    }()
     
-    init(feedAnalyticalRegistry: FeedAnalyticalRegistry = FeedAnalyticalRegistry.sharedInstance, profileAnalyticalRegistry: ProfileAnalyticalRegistry = ProfileAnalyticalRegistry.sharedInstance) {
-        self.profileAnalyticalRegistry = profileAnalyticalRegistry
-        self.feedAnalyticalRegistry = feedAnalyticalRegistry
-        super.init()
-        feedAnalyticalRegistry.delegate = self
-        profileAnalyticalRegistry.delegate = self
-    }
+    lazy var settingsAnalyticalRegistry: SettingsAnalyticalRegistry = {
+        let settingsAnalyticalRegistry = SettingsAnalyticalRegistry(delegate: self)
+        
+        return settingsAnalyticalRegistry
+    }()
     
-    // MARK: Singleton
+    // MARK: - Singleton
     
     static let sharedInstance = AnalyticsManager()
     
-    // MARK: AnalyticsDelegate
+    // MARK: - AnalyticsDelegate
     
     func sendEvent(name: String) {
         sendEvent(name, properties: nil)

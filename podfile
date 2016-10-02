@@ -3,6 +3,14 @@ platform :ios, "10.0"
 use_frameworks!
 inhibit_all_warnings!
 
+def common_pods
+	pod 'Mixpanel', '3.0.4'
+end
+
 target 'AnalyticalAppetite-Example' do
-  pod 'Mixpanel', '3.0.4'
+  	common_pods
+end
+
+target 'AnalyticalAppetite-ExampleTests' do
+    common_pods
 end

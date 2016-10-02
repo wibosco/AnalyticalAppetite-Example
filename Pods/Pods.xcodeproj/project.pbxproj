@@ -138,19 +138,6 @@
 				</array>
 			</dict>
 		</dict>
-		<key>09CD28C3D42891759504BF45B558B7CA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example-frameworks.sh</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>0A4E169F11EFD6C870F61B57A91374AA</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -357,6 +344,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>0DBA076C8EACC4D15EA3FD03BA0E9976</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>0E11CE5A5838B6F91D44688BA0CAB7AB</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -375,7 +375,7 @@
 		<key>0E6E6540D8D841E69FA5F943750E624B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>6266E29FAF9CE673A8652243A161400A</string>
+			<string>E8C0A686EE70698082D0C0D251BAE148</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -571,6 +571,21 @@
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
+		<key>1E878504F9685296F2FDE39EC41124F9</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Mixpanel.framework</string>
+			<key>path</key>
+			<string>Mixpanel.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>1EB6D5F3A7EEE866B086007760A26A3F</key>
 		<dict>
 			<key>fileRef</key>
@@ -596,19 +611,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
-		</dict>
-		<key>20CEA326C52EB0004B5B408A9872F467</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>20EC0B2C3D6041BFD1EEB8F928708361</key>
 		<dict>
@@ -651,18 +653,20 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>22CA10B4D77F3BC776E9C43814B8E7EF</key>
+		<key>21D17300FE3BED30CAD88064B1E20C8A</key>
 		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
 			<key>includeInIndex</key>
-			<string>1</string>
+			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
+			<key>name</key>
+			<string>Pods_AnalyticalAppetite_Example.framework</string>
 			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example-resources.sh</string>
+			<string>Pods-AnalyticalAppetite-Example.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>22E79237C7E0AA0E4DA459C0DFD0070B</key>
 		<dict>
@@ -762,6 +766,21 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>2B06BEFA9C11DD45292689CA352784B4</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>Pods_AnalyticalAppetite_ExampleTests.framework</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>2C195F97D76935A58F86774D4D6AFF90</key>
 		<dict>
@@ -1040,6 +1059,19 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>39CDA3EA1BA0CA71F2E69910E23C12F4</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>39CFF159A95857EF8ECA36E2C295BF37</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1052,6 +1084,32 @@
 			<string>UIViewController+AutomaticEvents.m</string>
 			<key>path</key>
 			<string>Mixpanel/UIViewController+AutomaticEvents.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>39E1CDCC446245DEE9C15A97E88C5997</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3A62B5723BF14DBA32FFD5C89257725A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example-resources.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1130,6 +1188,21 @@
 			<string>MPTweak.h</string>
 			<key>path</key>
 			<string>Mixpanel/MPTweak.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>3E946B165C3B26AA8B3838807883EF42</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>1E878504F9685296F2FDE39EC41124F9</string>
+				<string>21D17300FE3BED30CAD88064B1E20C8A</string>
+				<string>2B06BEFA9C11DD45292689CA352784B4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -1245,6 +1318,20 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>42FBA52092513987A615ADC4F6274706</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D2D1F5FDCC2EDD5450B54B49F5FEE017</string>
+				<string>5D3BFCDAFED9975C74CD8525F58062C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Targets Support Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>433687696F554F8A49553F8E9CB75FF8</key>
 		<dict>
@@ -1376,6 +1463,30 @@
 				</array>
 			</dict>
 		</dict>
+		<key>451ACA1BAC1C89AEB3DD7DA611412F70</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4526F3369197E544C2063A9F196C4D7F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>464CAF525097F047B50AFCA7E46DCC48</key>
 		<dict>
 			<key>fileRef</key>
@@ -1456,6 +1567,13 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>4A06BE469AA10605E4860CA2DA6174BB</key>
+		<dict>
+			<key>fileRef</key>
+			<string>8B2FB4771FE624861753D1F1E1D89838</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
 		<key>4A1CFF3F64D73B4BC3D11AFDC2CF3FFD</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -1510,17 +1628,6 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
-		<key>4ABE98829DC4DD5AFC52FE3EF4F545D7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example.modulemap</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>4AE069D63639C6FD782C18D85AB16183</key>
 		<dict>
 			<key>fileRef</key>
@@ -1536,7 +1643,7 @@
 		<key>4AE0DABF9BCFA43AF6CD5598BCBD84C9</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>20CEA326C52EB0004B5B408A9872F467</string>
+			<string>EA2F6BAAAED11E84B7259294F7757552</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -1730,10 +1837,23 @@
 				</array>
 			</dict>
 		</dict>
+		<key>531E670E11464DE9BE7E2FC93E2F3E62</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example-frameworks.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>53A2F1FC88E540002B98786142806E4B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>8CA905E030556385601958B8B38CD98D</string>
+			<string>7B0C74EC98BE95FFA11AF35B7FD94512</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 			<key>settings</key>
@@ -1785,6 +1905,19 @@
 			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/QuartzCore.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>56B20901B125309F189E752277271077</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>57E9EA02B17A204B8C4B3EE2077D87E5</key>
 		<dict>
@@ -1908,25 +2041,36 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>5C0B9957B584E26234F53A2591A1AB2A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>5C4054BE35278659D2799F1C251D53DD</key>
 		<dict>
 			<key>fileRef</key>
 			<string>8B2FB4771FE624861753D1F1E1D89838</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>5D3BFCDAFED9975C74CD8525F58062C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F45EE6C1A88526C467525A3895F1ECAF</string>
+				<string>4526F3369197E544C2063A9F196C4D7F</string>
+				<string>DA73430FFA40D652B4BEE331327CB274</string>
+				<string>39E1CDCC446245DEE9C15A97E88C5997</string>
+				<string>D16C4BADDF1D361929688D472C5F5030</string>
+				<string>39CDA3EA1BA0CA71F2E69910E23C12F4</string>
+				<string>CA24262098DC6B41A679780BE3143F6E</string>
+				<string>6051AEE0B390B48428449A5F7FA5C111</string>
+				<string>83EF86AF54F38E12F87540062AF4379E</string>
+				<string>0DBA076C8EACC4D15EA3FD03BA0E9976</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-AnalyticalAppetite-ExampleTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>5EDEAF8D3C9DAFA22AEF0388ADCFE387</key>
 		<dict>
@@ -1965,6 +2109,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>6051AEE0B390B48428449A5F7FA5C111</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>611C651E930C3E6D9BF070EBCABDC7D9</key>
 		<dict>
 			<key>fileRef</key>
@@ -1990,19 +2147,6 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
-		</dict>
-		<key>6266E29FAF9CE673A8652243A161400A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>6309948A64661B346BCCD238BE698A91</key>
 		<dict>
@@ -2085,21 +2229,6 @@
 			<string>Mixpanel/Images/MPLogo@2x.png</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>64BCB332F41C918FE42442F22B29C9F1</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Pods_AnalyticalAppetite_Example.framework</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>65707D9A65E3697319E5B907A32A1AC3</key>
 		<dict>
@@ -2235,6 +2364,17 @@
 				</array>
 			</dict>
 		</dict>
+		<key>6D44A7B9C0574488CFF7EFB4FA0AE02C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>name</key>
+			<string>Mixpanel</string>
+			<key>target</key>
+			<string>8EFE724FDDAA2478F44F082C05BA272C</string>
+			<key>targetProxy</key>
+			<string>DD601F3B88DA12B97E0C7D61EABED35E</string>
+		</dict>
 		<key>6DBE8E47FB714E00B7E39BBB7B07677C</key>
 		<dict>
 			<key>buildConfigurations</key>
@@ -2263,6 +2403,13 @@
 			<string>Mixpanel/MixpanelExceptionHandler.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6DF804AE6BEE8C2315F2E0D924F30D70</key>
+		<dict>
+			<key>fileRef</key>
+			<string>D16C4BADDF1D361929688D472C5F5030</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
 		</dict>
 		<key>6F1366F762C1C3F27F497CA8D03D8157</key>
 		<dict>
@@ -2580,6 +2727,32 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>7B07868104614079243336A1C06A6B85</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>7B0C74EC98BE95FFA11AF35B7FD94512</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example-umbrella.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>7BAF5F5EC4517735DB49BE867B19C9E9</key>
 		<dict>
 			<key>children</key>
@@ -2636,8 +2809,8 @@
 				<string>93A4A3777CF96A4AAC1D13BA6DCCEA73</string>
 				<string>F4CDA5FA9197A41E0081E84F932906EB</string>
 				<string>AA66D818DA59112F67BE348DC75B88DA</string>
-				<string>E53D676FF3DEE486FFA0CFD240C84592</string>
-				<string>88E4237B3CE4FAC09913EBA4CD38BA5B</string>
+				<string>3E946B165C3B26AA8B3838807883EF42</string>
+				<string>42FBA52092513987A615ADC4F6274706</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -2810,19 +2983,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>80D29EDFFF1D36062F41EE2AE38BA665</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>80FA1B8583C89A2BC8A75294FDDB9F81</key>
 		<dict>
 			<key>fileRef</key>
@@ -2887,6 +3047,19 @@
 			<string>AutomaticEventsConstants.h</string>
 			<key>path</key>
 			<string>Mixpanel/AutomaticEventsConstants.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>83EF86AF54F38E12F87540062AF4379E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -2981,19 +3154,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>88E4237B3CE4FAC09913EBA4CD38BA5B</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>AC81F17218E99E1FA1617AB14B5FCA8E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>89B647224161DA5D0B58DB6844E6BEB3</key>
 		<dict>
@@ -3141,19 +3301,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8CA905E030556385601958B8B38CD98D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example-umbrella.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>8D1DE8DA5CCA38B63F1204ABE64CD919</key>
 		<dict>
 			<key>fileRef</key>
@@ -3224,7 +3371,7 @@
 			<key>productName</key>
 			<string>Mixpanel</string>
 			<key>productReference</key>
-			<string>90D74E72C3E78F0167E011AD34C2031B</string>
+			<string>1E878504F9685296F2FDE39EC41124F9</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>
@@ -3284,21 +3431,6 @@
 			<string>Mixpanel/MPABTestDesignerConnection.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
-		</dict>
-		<key>90D74E72C3E78F0167E011AD34C2031B</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>Mixpanel.framework</string>
-			<key>path</key>
-			<string>Mixpanel.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>92FBCD53D07E4F20F71047F0313656BD</key>
 		<dict>
@@ -3361,19 +3493,6 @@
 					<string>Public</string>
 				</array>
 			</dict>
-		</dict>
-		<key>94CAD14D5CF6309EEFD70E73B0F51426</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9512C6FE5A00C7E60A0E13B8E27664F5</key>
 		<dict>
@@ -3582,6 +3701,17 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>9C68F4F9DA4E72881831360840E4F80D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example.modulemap</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>9E52975BB19DCC34FBC9494239FD4174</key>
 		<dict>
@@ -3827,30 +3957,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>AC81F17218E99E1FA1617AB14B5FCA8E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>80D29EDFFF1D36062F41EE2AE38BA665</string>
-				<string>4ABE98829DC4DD5AFC52FE3EF4F545D7</string>
-				<string>BA671AD8E804A5289F0E7E72C058F4BB</string>
-				<string>94CAD14D5CF6309EEFD70E73B0F51426</string>
-				<string>6266E29FAF9CE673A8652243A161400A</string>
-				<string>09CD28C3D42891759504BF45B558B7CA</string>
-				<string>22CA10B4D77F3BC776E9C43814B8E7EF</string>
-				<string>8CA905E030556385601958B8B38CD98D</string>
-				<string>20CEA326C52EB0004B5B408A9872F467</string>
-				<string>5C0B9957B584E26234F53A2591A1AB2A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-AnalyticalAppetite-Example</string>
-			<key>path</key>
-			<string>Target Support Files/Pods-AnalyticalAppetite-Example</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>AE68CE55415A7768EDE92AD7CC36C839</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4040,6 +4146,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>B3C8600297ACA65095963E2E842B7134</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>6DF804AE6BEE8C2315F2E0D924F30D70</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>B532A7CB5A7139C89043FD307C2E88D3</key>
 		<dict>
@@ -4238,19 +4357,6 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BA671AD8E804A5289F0E7E72C058F4BB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-AnalyticalAppetite-Example-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
 		<key>BB2D0CF2EB69A91A7FF9CA768E0DAF89</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4277,6 +4383,19 @@
 			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
+		</dict>
+		<key>BBD1AE4F330FCE8987B6FA0B1825A7DC</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>F60621E88B0C27AC7157FEBB94CA3A47</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>BC5B90DD903D44722444E1F0A6845A6A</key>
 		<dict>
@@ -4544,6 +4663,19 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>CA24262098DC6B41A679780BE3143F6E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.script.sh</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests-resources.sh</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>CA74137AA6C2EDC6BDAC1ECCD36AD53F</key>
 		<dict>
 			<key>includeInIndex</key>
@@ -4623,6 +4755,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>D16C4BADDF1D361929688D472C5F5030</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>D16C7E636785B524BD1D5859FA40E582</key>
 		<dict>
 			<key>fileRef</key>
@@ -4675,6 +4820,98 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>D26C0ADC8A433FB1D071F8F1CF9AFCBA</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0DBA076C8EACC4D15EA3FD03BA0E9976</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf-with-dsym</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>NO</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_AnalyticalAppetite_ExampleTests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>D2D1F5FDCC2EDD5450B54B49F5FEE017</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>451ACA1BAC1C89AEB3DD7DA611412F70</string>
+				<string>9C68F4F9DA4E72881831360840E4F80D</string>
+				<string>56B20901B125309F189E752277271077</string>
+				<string>E607FE2A8714B824DCA04A950CB8EA28</string>
+				<string>E8C0A686EE70698082D0C0D251BAE148</string>
+				<string>531E670E11464DE9BE7E2FC93E2F3E62</string>
+				<string>3A62B5723BF14DBA32FFD5C89257725A</string>
+				<string>7B0C74EC98BE95FFA11AF35B7FD94512</string>
+				<string>EA2F6BAAAED11E84B7259294F7757552</string>
+				<string>7B07868104614079243336A1C06A6B85</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-AnalyticalAppetite-Example</string>
+			<key>path</key>
+			<string>Target Support Files/Pods-AnalyticalAppetite-Example</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D36D93D4501835B77AECA46C4A96335E</key>
 		<dict>
@@ -4731,7 +4968,7 @@
 			<key>mainGroup</key>
 			<string>7DB346D0F39D3F0E887471402A8071AB</string>
 			<key>productRefGroup</key>
-			<string>E53D676FF3DEE486FFA0CFD240C84592</string>
+			<string>3E946B165C3B26AA8B3838807883EF42</string>
 			<key>projectDirPath</key>
 			<string></string>
 			<key>projectReferences</key>
@@ -4742,6 +4979,7 @@
 			<array>
 				<string>8EFE724FDDAA2478F44F082C05BA272C</string>
 				<string>FBFBA71A17D274B4A0064DFA2CBF74E4</string>
+				<string>E5FA8D0363B3474E3FA59CB0ABCAE576</string>
 			</array>
 		</dict>
 		<key>D499E813E899872FB43EA9F16E0C4DD4</key>
@@ -4862,6 +5100,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>DA73430FFA40D652B4BEE331327CB274</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>DB183C9C4AE8F21FCD95FF27E2E2303F</key>
 		<dict>
 			<key>fileRef</key>
@@ -4929,6 +5180,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>DD601F3B88DA12B97E0C7D61EABED35E</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>D41D8CD98F00B204E9800998ECF8427E</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>8EFE724FDDAA2478F44F082C05BA272C</string>
+			<key>remoteInfo</key>
+			<string>Mixpanel</string>
 		</dict>
 		<key>DDF426D9D61CF51D21E0662C401CCCD2</key>
 		<dict>
@@ -5008,6 +5272,19 @@
 			<string>Mixpanel/MPBOOLToNSNumberValueTransformer.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DFBE7918BBBEDE1DDDD8F51EE42B177F</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4A06BE469AA10605E4860CA2DA6174BB</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
 		</dict>
 		<key>E0491C40CFDCCF575D37AECCDD8F7489</key>
 		<dict>
@@ -5144,17 +5421,43 @@
 				</array>
 			</dict>
 		</dict>
-		<key>E53D676FF3DEE486FFA0CFD240C84592</key>
+		<key>E5FA8D0363B3474E3FA59CB0ABCAE576</key>
 		<dict>
-			<key>children</key>
+			<key>buildConfigurationList</key>
+			<string>EAD1185067105E0C7F91443F5F2ED12C</string>
+			<key>buildPhases</key>
 			<array>
-				<string>90D74E72C3E78F0167E011AD34C2031B</string>
-				<string>64BCB332F41C918FE42442F22B29C9F1</string>
+				<string>B3C8600297ACA65095963E2E842B7134</string>
+				<string>DFBE7918BBBEDE1DDDD8F51EE42B177F</string>
+				<string>BBD1AE4F330FCE8987B6FA0B1825A7DC</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>6D44A7B9C0574488CFF7EFB4FA0AE02C</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXNativeTarget</string>
 			<key>name</key>
-			<string>Products</string>
+			<string>Pods-AnalyticalAppetite-ExampleTests</string>
+			<key>productName</key>
+			<string>Pods-AnalyticalAppetite-ExampleTests</string>
+			<key>productReference</key>
+			<string>2B06BEFA9C11DD45292689CA352784B4</string>
+			<key>productType</key>
+			<string>com.apple.product-type.framework</string>
+		</dict>
+		<key>E607FE2A8714B824DCA04A950CB8EA28</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example-acknowledgements.plist</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
@@ -5253,6 +5556,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
+		<key>E8C0A686EE70698082D0C0D251BAE148</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example-dummy.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
 		<key>E923582277413D27C4F3A358DF42255E</key>
 		<dict>
 			<key>fileRef</key>
@@ -5264,6 +5580,19 @@
 				<key>COMPILER_FLAGS</key>
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
+		</dict>
+		<key>EA2F6BAAAED11E84B7259294F7757552</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-AnalyticalAppetite-Example.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>EA753326B5B42881C900FD976215B105</key>
 		<dict>
@@ -5291,6 +5620,20 @@
 			<string>Mixpanel/MPUITableViewBinding.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
+		</dict>
+		<key>EAD1185067105E0C7F91443F5F2ED12C</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>F01DF73C6DB96247CA112453A7B0FA46</string>
+				<string>D26C0ADC8A433FB1D071F8F1CF9AFCBA</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
 		</dict>
 		<key>EB1A9DF2A9F49AFBB7EB8A32BC2C8DB4</key>
 		<dict>
@@ -5342,7 +5685,7 @@
 		<key>EBCC04F0B52A1FEDF04C9F5FE973DDE8</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>5C0B9957B584E26234F53A2591A1AB2A</string>
+			<string>7B07868104614079243336A1C06A6B85</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
@@ -5516,6 +5859,74 @@
 				</array>
 			</dict>
 		</dict>
+		<key>F01DF73C6DB96247CA112453A7B0FA46</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>83EF86AF54F38E12F87540062AF4379E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>CURRENT_PROJECT_VERSION</key>
+				<string>1</string>
+				<key>DEBUG_INFORMATION_FORMAT</key>
+				<string>dwarf</string>
+				<key>DEFINES_MODULE</key>
+				<string>YES</string>
+				<key>DYLIB_COMPATIBILITY_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_CURRENT_VERSION</key>
+				<string>1</string>
+				<key>DYLIB_INSTALL_NAME_BASE</key>
+				<string>@rpath</string>
+				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
+				<string>YES</string>
+				<key>GCC_NO_COMMON_BLOCKS</key>
+				<string>YES</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Info.plist</string>
+				<key>INSTALL_PATH</key>
+				<string>$(LOCAL_LIBRARY_DIR)/Frameworks</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>10.0</string>
+				<key>LD_RUNPATH_SEARCH_PATHS</key>
+				<array>
+					<string>$(inherited)</string>
+					<string>@executable_path/Frameworks</string>
+					<string>@loader_path/Frameworks</string>
+				</array>
+				<key>MACH_O_TYPE</key>
+				<string>staticlib</string>
+				<key>MODULEMAP_FILE</key>
+				<string>Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests.modulemap</string>
+				<key>MTL_ENABLE_DEBUG_INFO</key>
+				<string>YES</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>OTHER_LIBTOOLFLAGS</key>
+				<string></string>
+				<key>PODS_ROOT</key>
+				<string>$(SRCROOT)</string>
+				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+				<string>org.cocoapods.${PRODUCT_NAME:rfc1034identifier}</string>
+				<key>PRODUCT_NAME</key>
+				<string>Pods_AnalyticalAppetite_ExampleTests</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VERSIONING_SYSTEM</key>
+				<string>apple-generic</string>
+				<key>VERSION_INFO_PREFIX</key>
+				<string></string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
 		<key>F0341D310E0F4D2CC21309A8052D7682</key>
 		<dict>
 			<key>fileRef</key>
@@ -5587,6 +5998,19 @@
 					<string>Public</string>
 				</array>
 			</dict>
+		</dict>
+		<key>F45EE6C1A88526C467525A3895F1ECAF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>F4C7656EECD268565D3C81E6533117EB</key>
 		<dict>
@@ -5694,6 +6118,20 @@
 				<string>-w -Xanalyzer -analyzer-disable-all-checks</string>
 			</dict>
 		</dict>
+		<key>F60621E88B0C27AC7157FEBB94CA3A47</key>
+		<dict>
+			<key>fileRef</key>
+			<string>6051AEE0B390B48428449A5F7FA5C111</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict>
+				<key>ATTRIBUTES</key>
+				<array>
+					<string>Public</string>
+				</array>
+			</dict>
+		</dict>
 		<key>F724E334DB62B93097AA23FFF6121A58</key>
 		<dict>
 			<key>buildActionMask</key>
@@ -5779,7 +6217,7 @@
 			<key>productName</key>
 			<string>Pods-AnalyticalAppetite-Example</string>
 			<key>productReference</key>
-			<string>64BCB332F41C918FE42442F22B29C9F1</string>
+			<string>21D17300FE3BED30CAD88064B1E20C8A</string>
 			<key>productType</key>
 			<string>com.apple.product-type.framework</string>
 		</dict>

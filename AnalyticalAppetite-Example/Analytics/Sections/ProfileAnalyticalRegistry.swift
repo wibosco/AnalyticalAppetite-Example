@@ -8,15 +8,15 @@
 
 import UIKit
 
-class ProfileAnalyticalRegistry: NSObject {
+class ProfileAnalyticalRegistry: AnalyticalRegistry {
     
-    // MARK: Events
+    // MARK: - Events
     
     let avatarChangedEventName = "Avatar Changed"
     let profileFieldsEventName = "Profile Fields"
     let friendRequestEventName = "Friend Request"
     
-    // MARK: Parameters
+    // MARK: - Parameters
     
     let fieldsFirstNameChangedPropertyName = "First Name Changed"
     let fieldsLastNameChangedPropertyName = "Last Name Changed"
@@ -25,21 +25,13 @@ class ProfileAnalyticalRegistry: NSObject {
     let fieldsTotalChangedPropertyName = "Total Fields Changed"
     let friendRequestedPropertyName = "Friend Requested"
     
-    // MARK: Singleton
-    
-    static let sharedInstance = ProfileAnalyticalRegistry()
-    
-    // MARK: Properties
-    
-    var delegate: AnalyticsDelegate?
-    
-    // MARK: Avatar
+    // MARK: - Avatar
     
     func sendAvatarChangedEvent() {
-        delegate?.sendEvent(avatarChangedEventName)
+        delegate.sendEvent(avatarChangedEventName)
     }
     
-    // MARK: Fields
+    // MARK: - Fields
     
     func sendFieldsChangedEvent(firstNameChanged: Bool, lastNameChanged: Bool, emailAddressChanged: Bool, bioChanged: Bool) {
         
@@ -68,14 +60,14 @@ class ProfileAnalyticalRegistry: NSObject {
         
         properties[fieldsTotalChangedPropertyName] = totalFieldsChanged
         
-        delegate?.sendEvent(profileFieldsEventName, properties: properties)
+        delegate.sendEvent(profileFieldsEventName, properties: properties)
     }
     
-    // MARK: FriendRequest
+    // MARK: - FriendRequest
     
     func sendFriendRequest(requested: Bool) {
         let properties = [friendRequestedPropertyName: requested]
         
-        delegate?.sendEvent(friendRequestEventName, properties: properties)
+        delegate.sendEvent(friendRequestEventName, properties: properties)
     }
 }

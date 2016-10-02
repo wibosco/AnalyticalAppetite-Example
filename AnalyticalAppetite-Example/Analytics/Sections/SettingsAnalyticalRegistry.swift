@@ -8,29 +8,21 @@
 
 import Foundation
 
-class SettingsAnalyticalRegistry: NSObject {
+class SettingsAnalyticalRegistry: AnalyticalRegistry {
     
-    // MARK: Events
+    // MARK: - Events
     
     let notificationsEventName = "Notifications"
     
-    // MARK: Parameters
+    // MARK: - Parameters
     
     let notificationsEnabledPropertyName = "Notification Enabled"
     
-    // MARK: Singleton
-    
-    static let sharedInstance = ProfileAnalyticalRegistry()
-    
-    // MARK: Properties
-    
-    var delegate: AnalyticsDelegate?
-    
-    // MARK: Notification
+    // MARK: - Notifications
     
     func sendNotificationEnabled(enabled: Bool) {
         let properties = [notificationsEnabledPropertyName: enabled]
         
-        delegate?.sendEvent(notificationsEventName, properties: properties)
+        delegate.sendEvent(notificationsEventName, properties: properties)
     }
 }
