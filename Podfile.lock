@@ -1,0 +1,14 @@
+PODS:
+  - Mixpanel (3.0.4):
+    - Mixpanel/Mixpanel (= 3.0.4)
+  - Mixpanel/Mixpanel (3.0.4)
+
+DEPENDENCIES:
+  - Mixpanel (= 3.0.4)
+
+SPEC CHECKSUMS:
+  Mixpanel: 4a2330c26556109d2f42b01e36a05eb9e2caf25e
+
+PODFILE CHECKSUM: 2cc2a84fe373441f238a34d5132562e3da680756
+
+COCOAPODS: 1.0.1

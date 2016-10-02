@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24396E11096D93B0ED8751A0 /* Pods_AnalyticalAppetite_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */; };
+		911E18ED1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */; };
+		911E18EF1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */; };
 		91F981081D9EBCA0004C31B6 /* AnalyticalAppetite_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981071D9EBCA0004C31B6 /* AnalyticalAppetite_ExampleTests.swift */; };
 		91F981211D9EBD44004C31B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981131D9EBD44004C31B6 /* AppDelegate.swift */; };
 		91F981231D9EBD44004C31B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F981161D9EBD44004C31B6 /* Assets.xcassets */; };
@@ -14,6 +17,8 @@
 		91F981251D9EBD44004C31B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F9811A1D9EBD44004C31B6 /* Main.storyboard */; };
 		91F981261D9EBD44004C31B6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F9811E1D9EBD44004C31B6 /* FirstViewController.swift */; };
 		91F981271D9EBD44004C31B6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981201D9EBD44004C31B6 /* SecondViewController.swift */; };
+		91F9812A1D9EC27B004C31B6 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */; };
+		91F9812D1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticalAppetite_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAnalyticalRegistry.swift; sourceTree = "<group>"; };
+		911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsAnalyticalRegistry.swift; sourceTree = "<group>"; };
 		91F980ED1D9EBCA0004C31B6 /* AnalyticalAppetite-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnalyticalAppetite-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F981031D9EBCA0004C31B6 /* AnalyticalAppetite-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnalyticalAppetite-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F981071D9EBCA0004C31B6 /* AnalyticalAppetite_ExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticalAppetite_ExampleTests.swift; sourceTree = "<group>"; };
@@ -38,6 +46,10 @@
 		91F9811B1D9EBD44004C31B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		91F9811E1D9EBD44004C31B6 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		91F981201D9EBD44004C31B6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAnalyticalRegistry.swift; sourceTree = "<group>"; };
+		CDDF6948D13BDEC8D3FC6850 /* Pods-AnalyticalAppetite-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-Example/Pods-AnalyticalAppetite-Example.release.xcconfig"; sourceTree = "<group>"; };
+		FEE382880273CF8A38719C77 /* Pods-AnalyticalAppetite-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-Example/Pods-AnalyticalAppetite-Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24396E11096D93B0ED8751A0 /* Pods_AnalyticalAppetite_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +71,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		89261707683E554E842F063C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEE382880273CF8A38719C77 /* Pods-AnalyticalAppetite-Example.debug.xcconfig */,
+				CDDF6948D13BDEC8D3FC6850 /* Pods-AnalyticalAppetite-Example.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		91F980E41D9EBCA0004C31B6 = {
 			isa = PBXGroup;
 			children = (
 				91F980EF1D9EBCA0004C31B6 /* AnalyticalAppetite-Example */,
 				91F981061D9EBCA0004C31B6 /* AnalyticalAppetite-ExampleTests */,
 				91F980EE1D9EBCA0004C31B6 /* Products */,
+				89261707683E554E842F063C /* Pods */,
+				A1BAFC5595C3D3682964D05F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +103,7 @@
 		91F980EF1D9EBCA0004C31B6 /* AnalyticalAppetite-Example */ = {
 			isa = PBXGroup;
 			children = (
+				91F981281D9EC269004C31B6 /* Analytics */,
 				91F981121D9EBD44004C31B6 /* Application */,
 				91F981151D9EBD44004C31B6 /* Resources */,
 				91F9811C1D9EBD44004C31B6 /* Stories */,
@@ -147,6 +172,34 @@
 			path = Second;
 			sourceTree = "<group>";
 		};
+		91F981281D9EC269004C31B6 /* Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */,
+				91F9812B1D9EC69E004C31B6 /* Registries */,
+			);
+			path = Analytics;
+			sourceTree = "<group>";
+		};
+		91F9812B1D9EC69E004C31B6 /* Registries */ = {
+			isa = PBXGroup;
+			children = (
+				91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */,
+				911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */,
+				911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */,
+			);
+			name = Registries;
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		A1BAFC5595C3D3682964D05F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 91F9810C1D9EBCA0004C31B6 /* Build configuration list for PBXNativeTarget "AnalyticalAppetite-Example" */;
 			buildPhases = (
+				B83261F3D2F6A724D5C9B653 /* [CP] Check Pods Manifest.lock */,
 				91F980E91D9EBCA0004C31B6 /* Sources */,
 				91F980EA1D9EBCA0004C31B6 /* Frameworks */,
 				91F980EB1D9EBCA0004C31B6 /* Resources */,
+				81BDD26720D3CE3D5FE1A65A /* [CP] Embed Pods Frameworks */,
+				A1994A41F53DA26CDFAD9446 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -192,14 +248,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Boles;
 				TargetAttributes = {
 					91F980EC1D9EBCA0004C31B6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					91F981021D9EBCA0004C31B6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 91F980EC1D9EBCA0004C31B6;
 					};
 				};
@@ -243,14 +301,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		81BDD26720D3CE3D5FE1A65A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnalyticalAppetite-Example/Pods-AnalyticalAppetite-Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1994A41F53DA26CDFAD9446 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AnalyticalAppetite-Example/Pods-AnalyticalAppetite-Example-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B83261F3D2F6A724D5C9B653 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		91F980E91D9EBCA0004C31B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91F9812D1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift in Sources */,
+				91F9812A1D9EC27B004C31B6 /* AnalyticsManager.swift in Sources */,
 				91F981271D9EBD44004C31B6 /* SecondViewController.swift in Sources */,
 				91F981211D9EBD44004C31B6 /* AppDelegate.swift in Sources */,
+				911E18EF1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */,
 				91F981261D9EBD44004C31B6 /* FirstViewController.swift in Sources */,
+				911E18ED1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,8 +416,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -352,8 +464,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -372,6 +486,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -379,23 +494,27 @@
 		};
 		91F9810D1D9EBCA0004C31B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEE382880273CF8A38719C77 /* Pods-AnalyticalAppetite-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "AnalyticalAppetite-Example/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "boles.AnalyticalAppetite-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
 		91F9810E1D9EBCA0004C31B6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDDF6948D13BDEC8D3FC6850 /* Pods-AnalyticalAppetite-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "AnalyticalAppetite-Example/Application/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "boles.AnalyticalAppetite-Example";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -407,6 +526,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "boles.AnalyticalAppetite-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnalyticalAppetite-Example.app/AnalyticalAppetite-Example";
 			};
 			name = Debug;
@@ -419,6 +539,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "boles.AnalyticalAppetite-ExampleTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnalyticalAppetite-Example.app/AnalyticalAppetite-Example";
 			};
 			name = Release;
