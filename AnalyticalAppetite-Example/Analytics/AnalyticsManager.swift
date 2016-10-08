@@ -19,7 +19,7 @@ class AnalyticsManager: NSObject, AnalyticsDelegate {
 
     // MARK: - Properties
     
-    let mixpanel = Mixpanel.sharedInstance()
+    let mixpanel = Mixpanel.sharedInstanceWithToken("32011ca4a547c7bba1278c903409d0e1")
     
     lazy var feedAnalyticalRegistry: FeedAnalyticalRegistry = {
         let feedAnalyticalRegistry = FeedAnalyticalRegistry(delegate: self)
