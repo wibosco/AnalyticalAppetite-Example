@@ -9,4 +9,4 @@ before_install:
    - pod repo update
 
 script:
-   xcodebuild -workspace AnalyticalAppetite-Example.xcworkspace -scheme AnalyticalAppetite-Example test -destination 'platform=iOS Simulator,name=iPhone 6'
+   travis_retry xcodebuild -workspace AnalyticalAppetite-Example.xcworkspace -scheme AnalyticalAppetite-Example test -destination "platform=iOS Simulator,OS=10.1,name=iPhone SE"
