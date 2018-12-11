@@ -17,9 +17,11 @@ protocol AnalyticsDelegate: class {
 
 class AnalyticsManager: NSObject, AnalyticsDelegate {
 
-    // MARK: - Properties
+    // MARK: - AnalyticEngines
     
-    let mixpanel = Mixpanel.sharedInstanceWithToken("32011ca4a547c7bba1278c903409d0e1")
+    let mixpanel = Mixpanel.sharedInstanceWithToken("your_mixpanel_token") //replace with your token
+    
+    // MARK: - Registries 
     
     lazy var feedAnalyticalRegistry: FeedAnalyticalRegistry = {
         let feedAnalyticalRegistry = FeedAnalyticalRegistry(delegate: self)
