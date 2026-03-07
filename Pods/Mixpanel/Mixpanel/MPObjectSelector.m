@@ -8,6 +8,7 @@
 
 #import <objc/runtime.h>
 #import <UIKit/UIKit.h>
+#import "MixpanelPrivate.h"
 #import "MPObjectSelector.h"
 
 @interface MPObjectFilter : NSObject
@@ -198,6 +199,15 @@
     return nil;
 }
 
+- (BOOL)pathContainsObjectOfClass:(Class)klass {
+    for (MPObjectFilter *filter in _filters) {
+        if ([NSClassFromString(filter.name) isSubclassOfClass:klass]) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
 - (NSString *)description
 {
     return self.string;
@@ -292,7 +302,7 @@
     return (([self.name isEqualToString:@"*"] || [view isKindOfClass:NSClassFromString(self.name)])
             && (self.nameOnly || (
                 (!self.predicate || [_predicate evaluateWithObject:view])
-                && (!self.index || [self isView:view siblingNumber:_index.integerValue])
+                && (self.index == nil || [self isView:view siblingNumber:_index.integerValue])
                 && (!(self.unique) || [self isView:view oneOfNSiblings:1])))
             );
 }
@@ -362,7 +372,7 @@
         if (presentingViewController) {
             [result addObject:presentingViewController];
         }
-        UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+        UIWindow *keyWindow = [Mixpanel sharedUIApplication].keyWindow;
         if (keyWindow.rootViewController == obj) {
             //TODO is there a better way to get the actual window that has this VC
             [result addObject:keyWindow];
@@ -423,7 +433,7 @@
     return result;
 }
 
-- (NSString *)description;
+- (NSString *)description
 {
     return [NSString stringWithFormat:@"%@[%@]", self.name, self.index ?: self.predicate];
 }

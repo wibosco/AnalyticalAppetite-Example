@@ -14,6 +14,7 @@
 #import "MPTweak.h"
 #import "MPTweakInline.h"
 #import "MPTweakStore.h"
+#include <stdatomic.h>
 
 static MPTweak *_MPTweakCreateWithEntry(NSString *name, mp_tweak_entry *entry)
 {
@@ -102,8 +103,9 @@ static MPTweak *_MPTweakCreateWithEntry(NSString *name, mp_tweak_entry *entry)
 @implementation _MPTweakInlineLoader
 
 + (void)load {
-    static uint32_t _tweaksLoaded = 0;
-    if (OSAtomicTestAndSetBarrier(1, &_tweaksLoaded)) {
+    static atomic_uint_fast32_t _tweaksLoaded = 0;
+    
+    if (atomic_fetch_or(&_tweaksLoaded, 1)) {
         return;
     }
     
@@ -130,6 +132,9 @@ static MPTweak *_MPTweakCreateWithEntry(NSString *name, mp_tweak_entry *entry)
         size_t count = size / sizeof(mp_tweak_entry);
         for (size_t i = 0; i < count; i++) {
             mp_tweak_entry *entry = &data[i];
+            if (entry->name == nil) {
+                continue;
+            }
             NSString *name = [NSString stringWithString:*entry->name];
             if ([store tweakWithName:name] == nil) {
                 MPTweak *tweak = _MPTweakCreateWithEntry(name, entry);

@@ -23,6 +23,7 @@ class SettingsAnalyticalRegistry: AnalyticalRegistry {
     func sendNotificationEnabled(enabled: Bool) {
         let properties = [notificationsEnabledPropertyName: enabled]
         
-        delegate.sendEvent(notificationsEventName, properties: properties)
+        delegate.sendEvent(name: notificationsEventName,
+                           properties: properties)
     }
 }

@@ -1,3 +1,5 @@
+
+
 [![Build Status](https://travis-ci.org/mixpanel/mixpanel-iphone.svg?branch=yolo-travis-ci)](https://travis-ci.org/mixpanel/mixpanel-iphone)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/mixpanel/mixpanel-iphone.svg)](http://isitmaintained.com/project/mixpanel/mixpanel-iphone "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/mixpanel/mixpanel-iphone.svg)](http://isitmaintained.com/project/mixpanel/mixpanel-iphone "Percentage of issues still open")
@@ -5,89 +7,134 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Apache License](http://img.shields.io/cocoapods/l/Mixpanel.svg?style=flat)](https://mixpanel.com)
 
-**Want to Contribute?**
+# Table of Contents
 
-The Mixpanel library for iOS is an open source project, and we'd love to see your contributions! We'd also love for you to come and work with us! Check out http://boards.greenhouse.io/mixpanel/jobs/25226#.U_4JXEhORKU for details.
+<!-- MarkdownTOC -->
 
-If you are using Swift, we recommend our **[Swift Library](https://github.com/mixpanel/mixpanel-swift)** (currently supports the tracking and people API).
+- [Overview](#overview)
+- [Quick Start Guide](#quick-start-guide)
+    - [Install Mixpanel](#1-install-mixpanel)
+    - [Initialize Mixpanel](#2-initialize-mixpanel)
+    - [Send Data](#3-send-data)
+    - [Check for Success](#4-check-for-success)
+    - [Complete Code Example](#complete-code-example)
+- [FAQ](#faq)
+- [I want to know more!](#i-want-to-know-more)
 
-# Installation
+<!-- /MarkdownTOC -->
 
-## CocoaPods
+<a name="introduction"></a>
+# Overview
 
-Mixpanel supports `CocoaPods` for easy installation.
-To Install, see our **[full documentation »](https://mixpanel.com/help/reference/ios)**
+The Mixpanel library for iOS is an open source project, and we'd love to see your contributions! We'd also love for you to come and work with us! Check out https://mixpanel.com/jobs/#openings for details.
+If you are using Swift, we recommend our **[Swift Library](https://github.com/mixpanel/mixpanel-swift)**.
 
-#### iOS: 
-`pod 'Mixpanel'`
-#### tvOS:
-`pod 'Mixpanel/tvOS'`
-#### watchOS:
-##### Host:
-`pod 'Mixpanel/MixpanelHostWatchOS'`
-##### Watch:
-`pod 'Mixpanel/WatchOS'`
-#### App Extension:
-`pod 'Mixpanel/AppExtension'`
+Check out our [Advanced iOS - Objective-C Guide](https://developer.mixpanel.com/docs/ios) for additional advanced configurations and use cases, like setting up your project with European Union data storage.
 
-## Carthage
+[Skip to a complete code example](#complete-code-example).
 
-Mixpanel also supports `Carthage` to package your dependencies as a framework.
-Check out the **[Carthage docs »](https://github.com/Carthage/Carthage)** for more info.
+# Quick Start Guide
+## 1. Install Mixpanel
+You can install the Mixpanel iOS - Objective-C library by using CocoaPods or Carthage. You will need your project token for initializing your library. You can get your project token from [project settings](https://mixpanel.com/settings/project).
 
-To integrate Mixpanel into your Xcode project using Carthage, specify it in your `Cartfile`:
+### Installation Option 1: CocoaPods
+1. If this is your first time using CocoaPods, Install CocoaPods using `gem install cocoapods`. Otherwise, continue to Step 3.
+2. Run `pod setup` to create a local CocoaPods spec mirror.
+3. Create a Podfile in your Xcode project directory by running `pod init` in your terminal, edit the Podfile generated, and add the following line: `pod 'Mixpanel'`.
+4. Run `pod install` in your Xcode project directory. CocoaPods should download and install the Mixpanel library, and create a new Xcode workspace. Open up this workspace in Xcode or typing `open *.xcworkspace` in your terminal.
 
-```ogdl
+### Installation Option 2: Carthage
+Mixpanel supports Carthage to package your dependencies as a framework. Include the following dependency in your Cartfile:
+```objc
 github "mixpanel/mixpanel-iphone"
 ```
+Check out the [Carthage docs](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) for more info.
 
-Run `carthage update` to build the framework and drag the built `Mixpanel.framework` into your Xcode project.
+### Installation Option 3: Swift Package Manager (only supported in 4.0.0.beta)
+On Jan 1, 2022, we’ll remove the [Messages & Experiments](https://mixpanel.com/blog/why-were-sunsetting-messaging-and-experiments/#:~:text=A%20year%20from%20now%2C%20on,offering%20discounts%20for%20getting%20started) feature from Mixpanel and they are currently no longer available for purchase. For now, you can choose to opt in to our beta version without Messages & Experiments feature support. You can use **Swift Package Manager** to install the beta version:
+1.  In Xcode, select File > Swift Packages > Add Package Dependency.
+2.  Follow the prompts using the URL for this repository and point to the branch `4.0.0.beta`
 
-## Manual Installation
+## 2. Initialize Mixpanel
+To initialize the library, add `#Import "Mixpanel/Mixpanel.h" into "AppDelegate.m" and call [sharedInstanceWithToken:](https://mixpanel.github.io/mixpanel-iphone/Classes/Mixpanel.html#//api/name/sharedInstanceWithToken:) with your project token as its argument in [application:didFinishLaunchingWithOptions:](https://developer.apple.com/documentation/uikit/uiapplicationdelegate#//apple_ref/occ/intfm/UIApplicationDelegate/application:willFinishLaunchingWithOptions:).
+```objc
+#import "Mixpanel/Mixpanel.h"
 
-To help users stay up to date with the latests version of our iOS SDK, we always recommend integrating our SDK via CocoaPods, which simplifies version updates and dependency management. However, there are cases where users can't use CocoaPods. Not to worry, just follow these manual installation steps and you'll be all set.
-
-### Step 1: Clone the SDK
-
-Git clone the latest version of "mixpanel-iphone" to your local machine using the following code in your terminal:
-
-```
-git clone https://github.com/mixpanel/mixpanel-iphone.git
-git checkout tags/v3.0.3
-```
-
-If you don't have git installed, get it [here](http://git-scm.com/downloads).
-
-### Step 2: Add the SDK to your app!
-
-Add the "Mixpanel" folder from the "mixpanel-iphone" to your Xcode project's folder:
-
-![alt text](http://images.mxpnl.com/blog/2014-09-24%2000:56:07.905215-SprityBird_and_mixpanel-iphone.png)
-
-And drag and drop the Mixpanel folder into your Xcode Project Workspace:
-
-![alt text](http://images.mxpnl.com/blog/2014-09-24%2001:08:51.474250-AppDelegate_m_and_SprityBird.png)
-
-### Step 3: Import All dependencies
-
-Add all dependencies of the Mixpanel SDK to your app. The full list of necessary frameworks and libraries on lines 16-17 in the "Mixpanel.podspec" file in the "mixpanel-iphone" directory: 
-
-![alt text](http://images.mxpnl.com/blog/2014-09-24%2001:32:27.445697-1__vim_and_spritybird_and_Mixpanel_-_Agent_and_spritybird.png)
-
-## Step 4: Integrate!
-
-Import "Mixpanel.h" into AppDelegate.m, and initialize Mixpanel within `application:didFinishLaunchingWithOptions:`
-
-![alt text](http://images.mxpnl.com/blog/2014-09-24%2001:19:19.598858-AppDelegate_m.png)
-
-```
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [Mixpanel sharedInstanceWithToken:MIXPANEL_TOKEN];
+...
+  [Mixpanel sharedInstanceWithToken:@"YOUR_API_TOKEN"];
+...
+}
+```
+[See all configuration options](https://mixpanel.github.io/mixpanel-iphone/Classes/Mixpanel.html)
+
+## 3. Send Data
+Let's get started by sending event data. You can send an event from anywhere in your application. Better understand user behavior by storing details that are specific to the event (properties). After initializing the library, Mixpanel will [automatically collect common mobile events](https://mixpanel.com/help/questions/articles/which-common-mobile-events-can-mixpanel-collect-on-my-behalf-automatically). You can enable/disable automatic collection through your [project settings](https://help.mixpanel.com/hc/en-us/articles/115004596186#enable-or-disable-common-mobile-events). Also, Mixpanel automatically tracks some properties by default. [learn more](https://help.mixpanel.com/hc/en-us/articles/115004613766-Default-Properties-Collected-by-Mixpanel#iOS)
+
+```objc
+Mixpanel *mixpanel = [Mixpanel sharedInstance];
+[mixpanel track:@"Sign Up" properties:@{
+  @"source": @"Pat's affiliate site",
+  @"Opted out of email": @YES
+}];
+```
+
+## 4. Check for Success
+[Open up Live View in Mixpanel](http://mixpanel.com/report/live) to view incoming events. 
+
+Once data hits our API, it generally takes ~60 seconds for it to be processed, stored, and queryable in your project.
+
+## Complete Code Example
+Here's a runnable code example that covers everything in this quickstart guide.
+```objc
+#import "Mixpanel/Mixpanel.h"
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+...
+  Mixpanel *mixpanel = [Mixpanel sharedInstanceWithToken:@"YOUR_API_TOKEN"];
+  [mixpanel track:@"Sign Up" properties:@{
+    @"source": @"Pat's affiliate site",
+    @"Opted out of email": @YES
+  }];
+...
 }
 ```
 
-## Start tracking
+# FAQ
+**I want to stop tracking an event/event property in Mixpanel. Is that possible?**
 
-You're done! You've successfully integrated the Mixpanel SDK into your app. To stay up to speed on important SDK releases and updates watch our iPhone repository on [Github](https://github.com/mixpanel/mixpanel-iphone).
+Yes, in Lexicon, you can intercept and drop incoming events or properties. Mixpanel won’t store any new data for the event or property you select to drop. [See this article for more information](https://help.mixpanel.com/hc/en-us/articles/360001307806#dropping-events-and-properties).
 
-Have any questions? Reach out to [support@mixpanel.com](mailto:support@mixpanel.com) to speak to someone smart, quickly.
+**I have a test user I would like to opt out of tracking. How do I do that?**
+
+Mixpanel’s client-side tracking library contains the [optOutTracking()](https://mixpanel.github.io/mixpanel-iphone/Classes/Mixpanel.html#//api/name/optOutTracking) method, which will set the user’s local opt-out state to “true” and will prevent data from being sent from a user’s device. More detailed instructions can be found in the section, [Opting users out of tracking](ios#opting-users-out-of-tracking).
+
+**Why aren't my events showing up?**
+
+To preserve battery life and customer bandwidth, the Mixpanel library doesn't send the events you record immediately. Instead, it sends batches to the Mixpanel servers every 60 seconds while your application is running, as well as when the application transitions to the background. You can call [flush()](https://mixpanel.github.io/mixpanel-iphone/Classes/Mixpanel.html#//api/name/flush) manually if you want to force a flush at a particular moment.
+
+```objc
+[mixpanel flush];
+```
+If your events are still not showing up after 60 seconds, check if you have opted out of tracking. You can also enable Mixpanel debugging and logging, it allows you to see the debug output from the Mixpanel library. To enable it, set [enableLogging](https://mixpanel.github.io/mixpanel-iphone/Classes/Mixpanel.html#//api/name/enableLogging) to true.
+
+```objc
+mixpanel.enableLogging = YES;
+```
+
+**Starting with iOS 14.5, do I need to request the user’s permission through the AppTrackingTransparency framework to use Mixpanel?**
+
+No, Mixpanel does not use IDFA so it does not require user permission through the AppTrackingTransparency(ATT) framework.
+
+**If I use Mixpanel, how do I answer app privacy questions for the App Store?**
+
+Please refer to our [Apple App Developer Privacy Guidance](https://mixpanel.com/legal/app-store-privacy-details/)
+
+## I want to know more!
+
+No worries, here are some links that you will find useful:
+* **[Advanced iOS - Objective-C Guide](https://developer.mixpanel.com/docs/ios)**
+* **[Sample app](https://github.com/mixpanel/mixpanel-iphone/tree/master/HelloMixpanel)**
+* **[Full API Reference](https://mixpanel.github.io/mixpanel-iphone/index.html)**
+
+Have any questions? Reach out to Mixpanel [Support](https://help.mixpanel.com/hc/en-us/requests/new) to speak to someone smart, quickly.

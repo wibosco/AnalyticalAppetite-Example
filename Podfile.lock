@@ -1,14 +1,16 @@
 PODS:
-  - Mixpanel (3.0.4):
-    - Mixpanel/Mixpanel (= 3.0.4)
-  - Mixpanel/Mixpanel (3.0.4)
+  - Mixpanel (3.9.1)
 
 DEPENDENCIES:
-  - Mixpanel (= 3.0.4)
+  - Mixpanel (= 3.9.1)
+
+SPEC REPOS:
+  trunk:
+    - Mixpanel
 
 SPEC CHECKSUMS:
-  Mixpanel: 4a2330c26556109d2f42b01e36a05eb9e2caf25e
+  Mixpanel: c56ad53567add8e710b10172baf3b8d8b1da9228
 
-PODFILE CHECKSUM: 2943b6473493e74a5513ccbde805783e04b4c735
+PODFILE CHECKSUM: 074f1c0fcd7f418c6eecfbb913f75e50a93b2f77
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.16.1

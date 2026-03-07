@@ -28,16 +28,19 @@ class ProfileAnalyticalRegistry: AnalyticalRegistry {
     // MARK: - Avatar
     
     func sendAvatarChangedEvent() {
-        delegate.sendEvent(avatarChangedEventName)
+        delegate.sendEvent(name: avatarChangedEventName)
     }
     
     // MARK: - Fields
     
-    func sendFieldsChangedEvent(firstNameChanged: Bool, lastNameChanged: Bool, emailAddressChanged: Bool, bioChanged: Bool) {
+    func sendFieldsChangedEvent(firstNameChanged: Bool,
+                                lastNameChanged: Bool,
+                                emailAddressChanged: Bool,
+                                bioChanged: Bool) {
         
-        var properties: [String: AnyObject] = [fieldsFirstNameChangedPropertyName: firstNameChanged,
-                                               fieldsLastNameChangedPropertyName: lastNameChanged,
-                                               fieldsEmailAddressChangedPropertyName: emailAddressChanged,
+        var properties: [String: Any] = [fieldsFirstNameChangedPropertyName: firstNameChanged,
+                                          fieldsLastNameChangedPropertyName: lastNameChanged,
+                                      fieldsEmailAddressChangedPropertyName: emailAddressChanged,
                                                fieldsBioChangedPropertyName: bioChanged]
         
         var totalFieldsChanged = 0
@@ -60,7 +63,8 @@ class ProfileAnalyticalRegistry: AnalyticalRegistry {
         
         properties[fieldsTotalChangedPropertyName] = totalFieldsChanged
         
-        delegate.sendEvent(profileFieldsEventName, properties: properties)
+        delegate.sendEvent(name: profileFieldsEventName,
+                           properties: properties)
     }
     
     // MARK: - FriendRequest
@@ -68,6 +72,7 @@ class ProfileAnalyticalRegistry: AnalyticalRegistry {
     func sendFriendRequest(requested: Bool) {
         let properties = [friendRequestedPropertyName: requested]
         
-        delegate.sendEvent(friendRequestEventName, properties: properties)
+        delegate.sendEvent(name: friendRequestEventName,
+                           properties: properties)
     }
 }

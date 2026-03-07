@@ -1,10 +1,10 @@
-platform :ios, "10.0"
+platform :ios, "15.0"
 
 use_frameworks!
 inhibit_all_warnings!
 
 def common_pods
-	pod 'Mixpanel', '3.0.4'
+	pod 'Mixpanel', '3.9.1'
 end
 
 target 'AnalyticalAppetite-Example' do
@@ -13,4 +13,13 @@ end
 
 target 'AnalyticalAppetite-ExampleTests' do
     common_pods
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '15.0'
+			config.build_settings['ENABLE_USER_SCRIPT_SANDBOXING'] = 'NO'
+    end
+  end
 end

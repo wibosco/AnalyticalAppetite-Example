@@ -3,7 +3,7 @@ This application makes use of the following third party libraries:
 
 ## Mixpanel
 
-Copyright 2013 Mixpanel, Inc.
+Copyright 2021 Mixpanel, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this work except in compliance with the License.

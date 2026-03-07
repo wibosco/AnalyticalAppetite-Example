@@ -9,9 +9,9 @@
 import Foundation
 import Mixpanel
 
-protocol AnalyticsDelegate: class {
+protocol AnalyticsDelegate: AnyObject {
     func sendEvent(name: String)
-    func sendEvent(name: String, properties: [String: AnyObject]?)
+    func sendEvent(name: String, properties: [String: Any]?)
     func startTimedEvent(name: String)
 }
 
@@ -19,7 +19,7 @@ class AnalyticsManager: NSObject, AnalyticsDelegate {
 
     // MARK: - AnalyticEngines
     
-    let mixpanel = Mixpanel.sharedInstanceWithToken("your_mixpanel_token") //replace with your token
+    let mixpanel = Mixpanel.sharedInstance(withToken: "your_mixpanel_token") //replace with your token
     
     // MARK: - Registries 
     
@@ -48,10 +48,11 @@ class AnalyticsManager: NSObject, AnalyticsDelegate {
     // MARK: - AnalyticsDelegate
     
     func sendEvent(name: String) {
-        sendEvent(name, properties: nil)
+        sendEvent(name: name, properties: nil)
     }
     
-    func sendEvent(name: String, properties: [String: AnyObject]?) {
+    func sendEvent(name: String,
+                   properties: [String: Any]?) {
         mixpanel.track(name, properties: properties)
     }
     

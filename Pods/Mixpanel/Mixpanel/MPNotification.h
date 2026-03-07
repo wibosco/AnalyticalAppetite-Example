@@ -1,22 +1,24 @@
 #import <Foundation/Foundation.h>
-
-extern NSString *const MPNotificationTypeMini;
-extern NSString *const MPNotificationTypeTakeover;
+#import "MPDisplayTrigger.h"
 
 @interface MPNotification : NSObject
 
+@property (nonatomic, readonly) NSDictionary *jsonDescription;
+@property (nonatomic, readonly) NSDictionary *extrasDescription;
 @property (nonatomic, readonly) NSUInteger ID;
 @property (nonatomic, readonly) NSUInteger messageID;
-@property (nonatomic, strong) NSString *type;
-@property (nonatomic, strong) NSString *style;
-@property (nonatomic, strong) NSURL *imageURL;
+@property (nonatomic, readonly) NSString *type;
+@property (nonatomic, copy) NSURL *imageURL;
 @property (nonatomic, strong) NSData *image;
-@property (nonatomic, strong) NSString *title;
-@property (nonatomic, strong) NSString *body;
-@property (nonatomic, strong) NSString *callToAction;
-@property (nonatomic, strong) NSURL *callToActionURL;
+@property (nonatomic, readonly) NSString *body;
+@property (nonatomic, readonly) NSUInteger bodyColor;
+@property (nonatomic, readonly) NSUInteger backgroundColor;
+@property (nonatomic, readonly) NSArray *displayTriggers;
 
-+ (MPNotification *)notificationWithJSONObject:(NSDictionary *)object;
 - (instancetype)init __unavailable;
+- (instancetype)initWithJSONObject:(NSDictionary *)jsonObject;
+- (BOOL)hasDisplayTriggers;
+- (BOOL)matchesEvent:(NSDictionary *)event;
++ (void)logNotificationError:(NSString *)field withValue:(id)value;
 
 @end
