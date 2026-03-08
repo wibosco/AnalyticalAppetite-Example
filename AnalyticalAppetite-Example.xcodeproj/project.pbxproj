@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		24396E11096D93B0ED8751A0 /* Pods_AnalyticalAppetite_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */; };
 		31457B0AE9F0348555835909 /* Pods_AnalyticalAppetite_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EA03D08E9897DDA8FD360F /* Pods_AnalyticalAppetite_ExampleTests.framework */; };
-		433E1A752F5C39B50083F3EC /* AnalyticsDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A732F5C39B50083F3EC /* AnalyticsDelegateSpy.swift */; };
+		433E1A752F5C39B50083F3EC /* StubAnalyticsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A732F5C39B50083F3EC /* StubAnalyticsDelegate.swift */; };
 		433E1A792F5C39C90083F3EC /* SettingsAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A782F5C39C90083F3EC /* SettingsAnalyticalRegistryTests.swift */; };
 		433E1A7A2F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A772F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift */; };
 		433E1A7B2F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A762F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift */; };
@@ -43,7 +43,7 @@
 
 /* Begin PBXFileReference section */
 		06AD35AA4B580569B15D4EEA /* Pods-AnalyticalAppetite-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		433E1A732F5C39B50083F3EC /* AnalyticsDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsDelegateSpy.swift; sourceTree = "<group>"; };
+		433E1A732F5C39B50083F3EC /* StubAnalyticsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAnalyticsDelegate.swift; sourceTree = "<group>"; };
 		433E1A762F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
 		433E1A772F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
 		433E1A782F5C39C90083F3EC /* SettingsAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
@@ -92,7 +92,7 @@
 		433E1A742F5C39B50083F3EC /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
-				433E1A732F5C39B50083F3EC /* AnalyticsDelegateSpy.swift */,
+				433E1A732F5C39B50083F3EC /* StubAnalyticsDelegate.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -453,7 +453,7 @@
 				433E1A7A2F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift in Sources */,
 				433E1A7B2F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift in Sources */,
 				911E18FF1DA1C30900A8AD59 /* FeedAnalyticalRegistry.swift in Sources */,
-				433E1A752F5C39B50083F3EC /* AnalyticsDelegateSpy.swift in Sources */,
+				433E1A752F5C39B50083F3EC /* StubAnalyticsDelegate.swift in Sources */,
 				911E18FD1DA1C30200A8AD59 /* AnalyticalRegistry.swift in Sources */,
 				911E19051DA1C5E800A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */,
 			);

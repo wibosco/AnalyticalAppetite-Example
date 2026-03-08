@@ -28,16 +28,18 @@ class FeedAnalyticalRegistry: AnalyticalRegistry {
         delegate.sendEvent(name: postOpenedEventName)
     }
     
-    func sendLikeEvent(like: Bool) {
-        let properties = [postLikePropertyName: like]
+    func sendLikeEvent(liked: Bool) {
+        let properties = [postLikePropertyName: liked]
         
-        delegate.sendEvent(name: postLikeEventName, properties: properties)
+        delegate.sendEvent(name: postLikeEventName,
+                           properties: properties)
     }
     
     func sendSharedEvent(shared: Bool) {
         let properties = [postSharedPropertyName: shared]
         
-        delegate.sendEvent(name: postSharedEventName, properties: properties)
+        delegate.sendEvent(name: postSharedEventName,
+                           properties: properties)
     }
     
     // MARK: - Scrolling

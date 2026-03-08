@@ -69,7 +69,7 @@ class ProfileAnalyticalRegistry: AnalyticalRegistry {
     
     // MARK: - FriendRequest
     
-    func sendFriendRequest(requested: Bool) {
+    func sendFriendRequestEvent(requested: Bool) {
         let properties = [friendRequestedPropertyName: requested]
         
         delegate.sendEvent(name: friendRequestEventName,

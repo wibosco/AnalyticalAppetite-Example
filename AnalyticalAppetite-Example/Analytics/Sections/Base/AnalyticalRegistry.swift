@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AnalyticalRegistry: NSObject {
+class AnalyticalRegistry {
     
     // MARK: - Properties
     
@@ -18,6 +18,5 @@ class AnalyticalRegistry: NSObject {
     
     init(delegate: AnalyticsDelegate) {
         self.delegate = delegate
-        super.init()
     }
 }

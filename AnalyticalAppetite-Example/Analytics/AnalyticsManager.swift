@@ -10,12 +10,19 @@ import Foundation
 import Mixpanel
 
 protocol AnalyticsDelegate: AnyObject {
-    func sendEvent(name: String)
     func sendEvent(name: String, properties: [String: Any]?)
     func startTimedEvent(name: String)
 }
 
-class AnalyticsManager: NSObject, AnalyticsDelegate {
+extension AnalyticsDelegate {
+    func sendEvent(name: String,
+                   properties: [String: Any]? = nil) {
+        sendEvent(name: name,
+                  properties: properties)
+    }
+}
+
+class AnalyticsManager: AnalyticsDelegate {
 
     // MARK: - AnalyticEngines
     
@@ -48,12 +55,14 @@ class AnalyticsManager: NSObject, AnalyticsDelegate {
     // MARK: - AnalyticsDelegate
     
     func sendEvent(name: String) {
-        sendEvent(name: name, properties: nil)
+        sendEvent(name: name,
+                  properties: nil)
     }
     
     func sendEvent(name: String,
                    properties: [String: Any]?) {
-        mixpanel.track(name, properties: properties)
+        mixpanel.track(name,
+                       properties: properties)
     }
     
     func startTimedEvent(name: String) {

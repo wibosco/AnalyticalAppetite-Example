@@ -9,72 +9,75 @@
 import XCTest
 
 class ProfileAnalyticalRegistryTests: XCTestCase {
-    
-    // MARK: - Properties
-    
-    var analyticsDelegateSpy: AnalyticsDelegateSpy!
-    var profileAnalyticalRegistry: ProfileAnalyticalRegistry!
+    var delegate: StubAnalyticsDelegate!
+    var sut: ProfileAnalyticalRegistry!
     
     // MARK: - Lifecycle
     
     override func setUp() {
         super.setUp()
         
-        analyticsDelegateSpy = AnalyticsDelegateSpy()
-        profileAnalyticalRegistry = ProfileAnalyticalRegistry(delegate: analyticsDelegateSpy)
+        delegate = StubAnalyticsDelegate()
+        sut = ProfileAnalyticalRegistry(delegate: delegate)
     }
     
     
     // MARK: - Tests
     
-    // MARK: sendAvatarChangedEvent
-    
-    func test_sendAvatarChangedEvent_eventName() {
-        profileAnalyticalRegistry.sendAvatarChangedEvent()
+    func test_whenSendAvatarChangedEvent_thenEventDetaiAreCorrect() {
+        sut.sendAvatarChangedEvent()
         
-        XCTAssertEqual(profileAnalyticalRegistry.avatarChangedEventName, analyticsDelegateSpy.passedInEventName)
-    }
-    
-    // MARK: sendFieldsChangedEvent
-    
-    func test_sendFieldsChangedEvent_eventName() {
-        profileAnalyticalRegistry.sendFieldsChangedEvent(firstNameChanged: true, lastNameChanged: true, emailAddressChanged: true, bioChanged: true)
+        XCTAssertEqual(delegate.events.count, 1)
         
-        XCTAssertEqual(profileAnalyticalRegistry.profileFieldsEventName, analyticsDelegateSpy.passedInEventName)
+        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
+            XCTFail("Expected sendEvent")
+            return
+        }
+        
+        XCTAssertEqual(sut.avatarChangedEventName, eventName)
+        XCTAssertNil(properties)
     }
-    
-    func test_sendFieldsChangedEvent_properties() {
+
+    func test_whenSendFieldsChangedEvent_thenEventDetaiAreCorrect() {
         let firstnameChanged = true
         let lastnameChanged = true
         let emailAddressChanged = false
         let bioChanged = true
         
-        profileAnalyticalRegistry.sendFieldsChangedEvent(firstNameChanged: firstnameChanged,
-                                                         lastNameChanged: lastnameChanged,
-                                                         emailAddressChanged: emailAddressChanged,
-                                                         bioChanged: bioChanged)
+        sut.sendFieldsChangedEvent(firstNameChanged: firstnameChanged,
+                                   lastNameChanged: lastnameChanged,
+                                   emailAddressChanged: emailAddressChanged,
+                                   bioChanged: bioChanged)
         
-        XCTAssertEqual(firstnameChanged, analyticsDelegateSpy.passedInProperties![profileAnalyticalRegistry.fieldsFirstNameChangedPropertyName] as? Bool)
-        XCTAssertEqual(lastnameChanged, analyticsDelegateSpy.passedInProperties![profileAnalyticalRegistry.fieldsLastNameChangedPropertyName] as? Bool)
-        XCTAssertEqual(emailAddressChanged, analyticsDelegateSpy.passedInProperties![profileAnalyticalRegistry.fieldsEmailAddressChangedPropertyName] as? Bool)
-        XCTAssertEqual(bioChanged, analyticsDelegateSpy.passedInProperties![profileAnalyticalRegistry.fieldsBioChangedPropertyName] as? Bool)
-        XCTAssertEqual(3, analyticsDelegateSpy.passedInProperties![profileAnalyticalRegistry.fieldsTotalChangedPropertyName] as? Int)
+        XCTAssertEqual(delegate.events.count, 1)
+        
+        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
+            XCTFail("Expected sendEvent with properties")
+            return
+        }
+        
+        XCTAssertEqual(sut.profileFieldsEventName, eventName)
+        
+        XCTAssertEqual(firstnameChanged, properties?[sut.fieldsFirstNameChangedPropertyName] as? Bool)
+        XCTAssertEqual(lastnameChanged, properties?[sut.fieldsLastNameChangedPropertyName] as? Bool)
+        XCTAssertEqual(emailAddressChanged, properties?[sut.fieldsEmailAddressChangedPropertyName] as? Bool)
+        XCTAssertEqual(bioChanged, properties?[sut.fieldsBioChangedPropertyName] as? Bool)
+        XCTAssertEqual(3, properties?[sut.fieldsTotalChangedPropertyName] as? Int)
     }
     
-    // MARK: sendFriendRequest
-    
-    func test_sendFriendRequest_eventName() {
-        profileAnalyticalRegistry.sendFriendRequest(requested: true)
-        
-        XCTAssertEqual(profileAnalyticalRegistry.friendRequestEventName, analyticsDelegateSpy.passedInEventName)
-    }
-    
-    func test_sendFriendRequest_properties() {
+    func test_whenSendFriendRequest_thenEventDetaiAreCorrect() {
         let requested = true
         
-        profileAnalyticalRegistry.sendFriendRequest(requested: requested)
+        sut.sendFriendRequestEvent(requested: requested)
         
-        XCTAssertEqual(requested, analyticsDelegateSpy.passedInProperties![profileAnalyticalRegistry.friendRequestedPropertyName] as? Bool)
-    }
-
+        XCTAssertEqual(delegate.events.count, 1)
+        
+        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
+            XCTFail("Expected sendEvent with properties")
+            return
+        }
+        
+        XCTAssertEqual(sut.friendRequestEventName, eventName)
+        XCTAssertEqual(requested, properties?[sut.friendRequestedPropertyName] as? Bool)
+    }    
 }

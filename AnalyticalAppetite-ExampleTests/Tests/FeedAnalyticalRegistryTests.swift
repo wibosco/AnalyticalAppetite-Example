@@ -9,76 +9,90 @@
 import XCTest
 
 class FeedAnalyticalRegistryTests: XCTestCase {
-    
-    // MARK: - Properties
-    
-    var analyticsDelegateSpy: AnalyticsDelegateSpy!
-    var feedAnalyticalRegistry: FeedAnalyticalRegistry!
+    var delegate: StubAnalyticsDelegate!
+    var sut: FeedAnalyticalRegistry!
     
     // MARK: - Lifecycle
     
     override func setUp() {
         super.setUp()
         
-        analyticsDelegateSpy = AnalyticsDelegateSpy()
-        feedAnalyticalRegistry = FeedAnalyticalRegistry(delegate: analyticsDelegateSpy)
+        delegate = StubAnalyticsDelegate()
+        sut = FeedAnalyticalRegistry(delegate: delegate)
     }
     
     // MARK: - Tests
     
-    // MARK: sendPostOpenedEvent
-    
-    func test_sendPostOpenedEvent_eventName() {
-        feedAnalyticalRegistry.sendPostOpenedEvent()
+    func test_whenSendPostOpenedEventIsCalled_thenEventDetaiAreCorrect() {
+        sut.sendPostOpenedEvent()
         
-        XCTAssertEqual(feedAnalyticalRegistry.postOpenedEventName, analyticsDelegateSpy.passedInEventName)
+        XCTAssertEqual(1, delegate.events.count)
+        
+        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
+            XCTFail("Expected sendEvent with properties")
+            return
+        }
+        
+        XCTAssertEqual(eventName, sut.postOpenedEventName)
+        XCTAssertNil(properties)
     }
     
-    // MARK: sendLikeEvent
-    
-    func test_sendLikeEvent_eventName() {
-        feedAnalyticalRegistry.sendLikeEvent(like: true)
-        
-        XCTAssertEqual(feedAnalyticalRegistry.postLikeEventName, analyticsDelegateSpy.passedInEventName)
-    }
-    
-    func test_sendLikeEvent_properties() {
+    func test_whenSendLikeEventIsCalled_thenEventDetaiAreCorrect() {
         let liked = true
         
-        feedAnalyticalRegistry.sendLikeEvent(like: liked)
+        sut.sendLikeEvent(liked: liked)
         
-        XCTAssertEqual(liked, analyticsDelegateSpy.passedInProperties![feedAnalyticalRegistry.postLikePropertyName] as? Bool)
-    }
-    
-    // MARK: sendSharedEvent
-    
-    func test_sendSharedEvent_eventName() {
-        feedAnalyticalRegistry.sendSharedEvent(shared: true)
+        XCTAssertEqual(1, delegate.events.count)
         
-        XCTAssertEqual(feedAnalyticalRegistry.postSharedEventName, analyticsDelegateSpy.passedInEventName)
+        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
+            XCTFail("Expected sendEvent with properties")
+            return
+        }
+        
+        XCTAssertEqual(sut.postLikeEventName, eventName)
+        XCTAssertEqual(properties?[sut.postLikePropertyName] as? Bool, liked)
     }
-    
-    func test_sendSharedEvent_properties() {
+
+    func test_whenSendSharedEventIsCalled_thenEventDetaiAreCorrect() {
         let shared = true
         
-        feedAnalyticalRegistry.sendSharedEvent(shared: shared)
+        sut.sendSharedEvent(shared: shared)
         
-        XCTAssertEqual(shared, analyticsDelegateSpy.passedInProperties![feedAnalyticalRegistry.postSharedPropertyName] as? Bool)
+        XCTAssertEqual(1, delegate.events.count)
+        
+        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
+            XCTFail("Expected sendEvent with properties")
+            return
+        }
+        
+        XCTAssertEqual(eventName, sut.postSharedEventName)
+        XCTAssertEqual(properties?[sut.postSharedPropertyName] as? Bool, shared)
     }
     
-    // MARK: startedScrollingFeedEvent
-    
-    func test_startedScrollingFeedEvent_eventName() {
-        feedAnalyticalRegistry.startedScrollingFeedEvent()
+    func test_whenStartedScrollingFeedEvent_thenEventDetaiAreCorrect() {
+        sut.startedScrollingFeedEvent()
         
-        XCTAssertEqual(feedAnalyticalRegistry.feedScrolledEventName, analyticsDelegateSpy.passedInEventName)
+        XCTAssertEqual(1, delegate.events.count)
+        
+        guard case let .startTimedEvent(eventName) = delegate.events[0] else {
+            XCTFail("Expected startTimedEvent")
+            return
+        }
+        
+        XCTAssertEqual(eventName, sut.feedScrolledEventName)
     }
     
-    // MARK: sendScrolledFeedEvent
-    
-    func test_sendScrolledFeedEvent_eventName() {
-        feedAnalyticalRegistry.sendScrolledFeedEvent()
+    func test_whenSendScrolledFeedEvent_thenEventDetaiAreCorrect() {
+        sut.sendScrolledFeedEvent()
         
-        XCTAssertEqual(feedAnalyticalRegistry.feedScrolledEventName, analyticsDelegateSpy.passedInEventName)
+        XCTAssertEqual(1, delegate.events.count)
+        
+        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
+            XCTFail("Expected sendEvent without properties")
+            return
+        }
+        
+        XCTAssertEqual(eventName, sut.feedScrolledEventName)
+        XCTAssertNil(properties)
     }
 }
