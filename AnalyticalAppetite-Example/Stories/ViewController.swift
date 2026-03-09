@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  ViewController.swift
 //  AnalyticalAppetite-Example
 //
 //  Created by William Boles on 30/09/2016.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

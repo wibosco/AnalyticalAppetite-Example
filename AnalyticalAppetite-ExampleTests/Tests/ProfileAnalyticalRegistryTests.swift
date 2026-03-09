@@ -8,76 +8,70 @@
 
 import XCTest
 
+@testable import AnalyticalAppetite_Example
+
 class ProfileAnalyticalRegistryTests: XCTestCase {
-    var delegate: StubAnalyticsDelegate!
+    var stub: StubAnalyticsEventSending!
     var sut: ProfileAnalyticalRegistry!
-    
+
     // MARK: - Lifecycle
-    
+
     override func setUp() {
         super.setUp()
-        
-        delegate = StubAnalyticsDelegate()
-        sut = ProfileAnalyticalRegistry(delegate: delegate)
-    }
-    
-    
-    // MARK: - Tests
-    
-    func test_whenSendAvatarChangedEvent_thenEventDetaiAreCorrect() {
-        sut.sendAvatarChangedEvent()
-        
-        XCTAssertEqual(delegate.events.count, 1)
-        
-        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
-            XCTFail("Expected sendEvent")
-            return
-        }
-        
-        XCTAssertEqual(sut.avatarChangedEventName, eventName)
-        XCTAssertNil(properties)
+
+        stub = StubAnalyticsEventSending()
+        sut = ProfileAnalyticalRegistry(service: stub)
     }
 
-    func test_whenSendFieldsChangedEvent_thenEventDetaiAreCorrect() {
-        let firstnameChanged = true
-        let lastnameChanged = true
+    // MARK: - Tests
+
+    func test_whenSendAvatarChangedEventIsCalled_thenEventDetailsAreCorrect() {
+        sut.sendAvatarChangedEvent()
+
+        guard case let .send(event) = stub.events.first else {
+            XCTFail("Expected send event")
+            return
+        }
+
+        XCTAssertEqual(event.name, "Avatar Changed")
+        XCTAssertTrue(event.properties.isEmpty)
+    }
+
+    func test_whenSendFieldsChangedEventIsCalled_thenEventDetailsAreCorrect() {
+        let firstNameChanged = true
+        let lastNameChanged = true
         let emailAddressChanged = false
         let bioChanged = true
-        
-        sut.sendFieldsChangedEvent(firstNameChanged: firstnameChanged,
-                                   lastNameChanged: lastnameChanged,
+
+        sut.sendFieldsChangedEvent(firstNameChanged: firstNameChanged,
+                                   lastNameChanged: lastNameChanged,
                                    emailAddressChanged: emailAddressChanged,
                                    bioChanged: bioChanged)
-        
-        XCTAssertEqual(delegate.events.count, 1)
-        
-        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
-            XCTFail("Expected sendEvent with properties")
+
+        guard case let .send(event) = stub.events.first else {
+            XCTFail("Expected send event")
             return
         }
-        
-        XCTAssertEqual(sut.profileFieldsEventName, eventName)
-        
-        XCTAssertEqual(firstnameChanged, properties?[sut.fieldsFirstNameChangedPropertyName] as? Bool)
-        XCTAssertEqual(lastnameChanged, properties?[sut.fieldsLastNameChangedPropertyName] as? Bool)
-        XCTAssertEqual(emailAddressChanged, properties?[sut.fieldsEmailAddressChangedPropertyName] as? Bool)
-        XCTAssertEqual(bioChanged, properties?[sut.fieldsBioChangedPropertyName] as? Bool)
-        XCTAssertEqual(3, properties?[sut.fieldsTotalChangedPropertyName] as? Int)
+
+        XCTAssertEqual(event.name, "Profile Fields")
+        XCTAssertEqual(event.properties["First Name Changed"] as? Bool, firstNameChanged)
+        XCTAssertEqual(event.properties["Last Name Changed"] as? Bool, lastNameChanged)
+        XCTAssertEqual(event.properties["Email Address Changed"] as? Bool, emailAddressChanged)
+        XCTAssertEqual(event.properties["Bio Changed"] as? Bool, bioChanged)
+        XCTAssertEqual(event.properties["Total Fields Changed"] as? Int, 3)
     }
-    
-    func test_whenSendFriendRequest_thenEventDetaiAreCorrect() {
+
+    func test_whenSendFriendRequestEventIsCalled_thenEventDetailsAreCorrect() {
         let requested = true
-        
+
         sut.sendFriendRequestEvent(requested: requested)
-        
-        XCTAssertEqual(delegate.events.count, 1)
-        
-        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
-            XCTFail("Expected sendEvent with properties")
+
+        guard case let .send(event) = stub.events.first else {
+            XCTFail("Expected send event")
             return
         }
-        
-        XCTAssertEqual(sut.friendRequestEventName, eventName)
-        XCTAssertEqual(requested, properties?[sut.friendRequestedPropertyName] as? Bool)
-    }    
+
+        XCTAssertEqual(event.name, "Friend Request")
+        XCTAssertEqual(event.properties["Friend Requested"] as? Bool, requested)
+    }
 }

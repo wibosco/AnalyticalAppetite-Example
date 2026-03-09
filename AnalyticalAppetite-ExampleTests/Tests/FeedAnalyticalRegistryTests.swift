@@ -8,91 +8,60 @@
 
 import XCTest
 
+@testable import AnalyticalAppetite_Example
+
 class FeedAnalyticalRegistryTests: XCTestCase {
-    var delegate: StubAnalyticsDelegate!
+    var stub: StubAnalyticsEventSending!
     var sut: FeedAnalyticalRegistry!
-    
+
     // MARK: - Lifecycle
-    
+
     override func setUp() {
         super.setUp()
-        
-        delegate = StubAnalyticsDelegate()
-        sut = FeedAnalyticalRegistry(delegate: delegate)
-    }
-    
-    // MARK: - Tests
-    
-    func test_whenSendPostOpenedEventIsCalled_thenEventDetaiAreCorrect() {
-        sut.sendPostOpenedEvent()
-        
-        XCTAssertEqual(1, delegate.events.count)
-        
-        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
-            XCTFail("Expected sendEvent with properties")
-            return
-        }
-        
-        XCTAssertEqual(eventName, sut.postOpenedEventName)
-        XCTAssertNil(properties)
-    }
-    
-    func test_whenSendLikeEventIsCalled_thenEventDetaiAreCorrect() {
-        let liked = true
-        
-        sut.sendLikeEvent(liked: liked)
-        
-        XCTAssertEqual(1, delegate.events.count)
-        
-        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
-            XCTFail("Expected sendEvent with properties")
-            return
-        }
-        
-        XCTAssertEqual(sut.postLikeEventName, eventName)
-        XCTAssertEqual(properties?[sut.postLikePropertyName] as? Bool, liked)
+
+        stub = StubAnalyticsEventSending()
+        sut = FeedAnalyticalRegistry(service: stub)
     }
 
-    func test_whenSendSharedEventIsCalled_thenEventDetaiAreCorrect() {
+    // MARK: - Tests
+
+    func test_whenSendPostOpenedEventIsCalled_thenEventDetailsAreCorrect() {
+        sut.sendPostOpenedEvent()
+
+        guard case let .send(event) = stub.events.first else {
+            XCTFail("Expected send event")
+            return
+        }
+
+        XCTAssertEqual(event.name, "Post Opened")
+        XCTAssertTrue(event.properties.isEmpty)
+    }
+
+    func test_whenSendLikeEventIsCalled_thenEventDetailsAreCorrect() {
+        let liked = true
+
+        sut.sendLikeEvent(liked: liked)
+
+        guard case let .send(event) = stub.events.first else {
+            XCTFail("Expected send event")
+            return
+        }
+
+        XCTAssertEqual(event.name, "Post Liked")
+        XCTAssertEqual(event.properties["Liked"] as? Bool, liked)
+    }
+
+    func test_whenSendSharedEventIsCalled_thenEventDetailsAreCorrect() {
         let shared = true
-        
+
         sut.sendSharedEvent(shared: shared)
-        
-        XCTAssertEqual(1, delegate.events.count)
-        
-        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
-            XCTFail("Expected sendEvent with properties")
+
+        guard case let .send(event) = stub.events.first else {
+            XCTFail("Expected send event")
             return
         }
-        
-        XCTAssertEqual(eventName, sut.postSharedEventName)
-        XCTAssertEqual(properties?[sut.postSharedPropertyName] as? Bool, shared)
-    }
-    
-    func test_whenStartedScrollingFeedEvent_thenEventDetaiAreCorrect() {
-        sut.startedScrollingFeedEvent()
-        
-        XCTAssertEqual(1, delegate.events.count)
-        
-        guard case let .startTimedEvent(eventName) = delegate.events[0] else {
-            XCTFail("Expected startTimedEvent")
-            return
-        }
-        
-        XCTAssertEqual(eventName, sut.feedScrolledEventName)
-    }
-    
-    func test_whenSendScrolledFeedEvent_thenEventDetaiAreCorrect() {
-        sut.sendScrolledFeedEvent()
-        
-        XCTAssertEqual(1, delegate.events.count)
-        
-        guard case let .sendEvent(eventName, properties) = delegate.events[0] else {
-            XCTFail("Expected sendEvent without properties")
-            return
-        }
-        
-        XCTAssertEqual(eventName, sut.feedScrolledEventName)
-        XCTAssertNil(properties)
+
+        XCTAssertEqual(event.name, "Post Shared")
+        XCTAssertEqual(event.properties["Shared"] as? Bool, shared)
     }
 }

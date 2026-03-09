@@ -9,26 +9,18 @@
 /* Begin PBXBuildFile section */
 		24396E11096D93B0ED8751A0 /* Pods_AnalyticalAppetite_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */; };
 		31457B0AE9F0348555835909 /* Pods_AnalyticalAppetite_ExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5EA03D08E9897DDA8FD360F /* Pods_AnalyticalAppetite_ExampleTests.framework */; };
-		433E1A752F5C39B50083F3EC /* StubAnalyticsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A732F5C39B50083F3EC /* StubAnalyticsDelegate.swift */; };
-		433E1A792F5C39C90083F3EC /* SettingsAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A782F5C39C90083F3EC /* SettingsAnalyticalRegistryTests.swift */; };
+		433E1A752F5C39B50083F3EC /* StubAnalyticsEventSending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A732F5C39B50083F3EC /* StubAnalyticsEventSending.swift */; };
 		433E1A7A2F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A772F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift */; };
 		433E1A7B2F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E1A762F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift */; };
-		911E18ED1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */; };
-		911E18EF1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */; };
-		911E18FD1DA1C30200A8AD59 /* AnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18FB1DA1BF0100A8AD59 /* AnalyticalRegistry.swift */; };
-		911E18FE1DA1C30300A8AD59 /* AnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18FB1DA1BF0100A8AD59 /* AnalyticalRegistry.swift */; };
-		911E18FF1DA1C30900A8AD59 /* FeedAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */; };
-		911E19031DA1C37A00A8AD59 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */; };
-		911E19051DA1C5E800A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */; };
-		911E19061DA1C5EB00A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */; };
+		433E93EB2F5F53C1004EDAF6 /* AnalyticsEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E93E92F5F53C1004EDAF6 /* AnalyticsEvent.swift */; };
+		433E93EF2F5F5679004EDAF6 /* FeedAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E93EC2F5F5679004EDAF6 /* FeedAnalyticalRegistry.swift */; };
+		433E93F02F5F5679004EDAF6 /* ProfileAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E93ED2F5F5679004EDAF6 /* ProfileAnalyticalRegistry.swift */; };
+		433E93F22F5F7F6F004EDAF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E93F12F5F7F6F004EDAF6 /* ViewController.swift */; };
 		91F981211D9EBD44004C31B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981131D9EBD44004C31B6 /* AppDelegate.swift */; };
 		91F981231D9EBD44004C31B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F981161D9EBD44004C31B6 /* Assets.xcassets */; };
 		91F981241D9EBD44004C31B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F981181D9EBD44004C31B6 /* LaunchScreen.storyboard */; };
 		91F981251D9EBD44004C31B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F9811A1D9EBD44004C31B6 /* Main.storyboard */; };
-		91F981261D9EBD44004C31B6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F9811E1D9EBD44004C31B6 /* FirstViewController.swift */; };
-		91F981271D9EBD44004C31B6 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981201D9EBD44004C31B6 /* SecondViewController.swift */; };
-		91F9812A1D9EC27B004C31B6 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */; };
-		91F9812D1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */; };
+		91F9812A1D9EC27B004C31B6 /* AnalyticsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981291D9EC27B004C31B6 /* AnalyticsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,15 +35,15 @@
 
 /* Begin PBXFileReference section */
 		06AD35AA4B580569B15D4EEA /* Pods-AnalyticalAppetite-ExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-ExampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		433E1A732F5C39B50083F3EC /* StubAnalyticsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAnalyticsDelegate.swift; sourceTree = "<group>"; };
+		433E1A732F5C39B50083F3EC /* StubAnalyticsEventSending.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubAnalyticsEventSending.swift; sourceTree = "<group>"; };
 		433E1A762F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
 		433E1A772F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
-		433E1A782F5C39C90083F3EC /* SettingsAnalyticalRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAnalyticalRegistryTests.swift; sourceTree = "<group>"; };
+		433E93E92F5F53C1004EDAF6 /* AnalyticsEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsEvent.swift; sourceTree = "<group>"; };
+		433E93EC2F5F5679004EDAF6 /* FeedAnalyticalRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAnalyticalRegistry.swift; sourceTree = "<group>"; };
+		433E93ED2F5F5679004EDAF6 /* ProfileAnalyticalRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAnalyticalRegistry.swift; sourceTree = "<group>"; };
+		433E93F12F5F7F6F004EDAF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		581320B53CF0CFE5FE68CFD4 /* Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticalAppetite_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileAnalyticalRegistry.swift; sourceTree = "<group>"; };
-		911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsAnalyticalRegistry.swift; sourceTree = "<group>"; };
-		911E18FB1DA1BF0100A8AD59 /* AnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticalRegistry.swift; sourceTree = "<group>"; };
 		91F980ED1D9EBCA0004C31B6 /* AnalyticalAppetite-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnalyticalAppetite-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F981031D9EBCA0004C31B6 /* AnalyticalAppetite-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AnalyticalAppetite-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F981091D9EBCA0004C31B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,10 +52,7 @@
 		91F981161D9EBD44004C31B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91F981191D9EBD44004C31B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		91F9811B1D9EBD44004C31B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		91F9811E1D9EBD44004C31B6 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		91F981201D9EBD44004C31B6 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
-		91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedAnalyticalRegistry.swift; sourceTree = "<group>"; };
+		91F981291D9EC27B004C31B6 /* AnalyticsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsService.swift; sourceTree = "<group>"; };
 		C5EA03D08E9897DDA8FD360F /* Pods_AnalyticalAppetite_ExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticalAppetite_ExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDDF6948D13BDEC8D3FC6850 /* Pods-AnalyticalAppetite-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-Example/Pods-AnalyticalAppetite-Example.release.xcconfig"; sourceTree = "<group>"; };
 		FEE382880273CF8A38719C77 /* Pods-AnalyticalAppetite-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-Example/Pods-AnalyticalAppetite-Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -92,9 +81,18 @@
 		433E1A742F5C39B50083F3EC /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
-				433E1A732F5C39B50083F3EC /* StubAnalyticsDelegate.swift */,
+				433E1A732F5C39B50083F3EC /* StubAnalyticsEventSending.swift */,
 			);
 			path = Doubles;
+			sourceTree = "<group>";
+		};
+		433E93EE2F5F5679004EDAF6 /* Registers */ = {
+			isa = PBXGroup;
+			children = (
+				433E93EC2F5F5679004EDAF6 /* FeedAnalyticalRegistry.swift */,
+				433E93ED2F5F5679004EDAF6 /* ProfileAnalyticalRegistry.swift */,
+			);
+			path = Registers;
 			sourceTree = "<group>";
 		};
 		89261707683E554E842F063C /* Pods */ = {
@@ -113,17 +111,8 @@
 			children = (
 				433E1A762F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift */,
 				433E1A772F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift */,
-				433E1A782F5C39C90083F3EC /* SettingsAnalyticalRegistryTests.swift */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		911E18FA1DA1BF0100A8AD59 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				911E18FB1DA1BF0100A8AD59 /* AnalyticalRegistry.swift */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		91F980E41D9EBCA0004C31B6 = {
@@ -197,47 +186,19 @@
 		91F9811C1D9EBD44004C31B6 /* Stories */ = {
 			isa = PBXGroup;
 			children = (
-				91F9811D1D9EBD44004C31B6 /* First */,
-				91F9811F1D9EBD44004C31B6 /* Second */,
+				433E93F12F5F7F6F004EDAF6 /* ViewController.swift */,
 			);
 			path = Stories;
-			sourceTree = "<group>";
-		};
-		91F9811D1D9EBD44004C31B6 /* First */ = {
-			isa = PBXGroup;
-			children = (
-				91F9811E1D9EBD44004C31B6 /* FirstViewController.swift */,
-			);
-			path = First;
-			sourceTree = "<group>";
-		};
-		91F9811F1D9EBD44004C31B6 /* Second */ = {
-			isa = PBXGroup;
-			children = (
-				91F981201D9EBD44004C31B6 /* SecondViewController.swift */,
-			);
-			path = Second;
 			sourceTree = "<group>";
 		};
 		91F981281D9EC269004C31B6 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
-				91F981291D9EC27B004C31B6 /* AnalyticsManager.swift */,
-				91F9812B1D9EC69E004C31B6 /* Registries */,
+				433E93EE2F5F5679004EDAF6 /* Registers */,
+				91F981291D9EC27B004C31B6 /* AnalyticsService.swift */,
+				433E93E92F5F53C1004EDAF6 /* AnalyticsEvent.swift */,
 			);
 			path = Analytics;
-			sourceTree = "<group>";
-		};
-		91F9812B1D9EC69E004C31B6 /* Registries */ = {
-			isa = PBXGroup;
-			children = (
-				911E18FA1DA1BF0100A8AD59 /* Base */,
-				91F9812C1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift */,
-				911E18EC1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift */,
-				911E18EE1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift */,
-			);
-			name = Registries;
-			path = Sections;
 			sourceTree = "<group>";
 		};
 		A1BAFC5595C3D3682964D05F /* Frameworks */ = {
@@ -432,14 +393,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				91F9812D1D9EC6F5004C31B6 /* FeedAnalyticalRegistry.swift in Sources */,
-				91F9812A1D9EC27B004C31B6 /* AnalyticsManager.swift in Sources */,
-				91F981271D9EBD44004C31B6 /* SecondViewController.swift in Sources */,
+				433E93EB2F5F53C1004EDAF6 /* AnalyticsEvent.swift in Sources */,
+				433E93EF2F5F5679004EDAF6 /* FeedAnalyticalRegistry.swift in Sources */,
+				433E93F02F5F5679004EDAF6 /* ProfileAnalyticalRegistry.swift in Sources */,
+				433E93F22F5F7F6F004EDAF6 /* ViewController.swift in Sources */,
+				91F9812A1D9EC27B004C31B6 /* AnalyticsService.swift in Sources */,
 				91F981211D9EBD44004C31B6 /* AppDelegate.swift in Sources */,
-				911E18EF1DA1B79100A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */,
-				91F981261D9EBD44004C31B6 /* FirstViewController.swift in Sources */,
-				911E18FE1DA1C30300A8AD59 /* AnalyticalRegistry.swift in Sources */,
-				911E18ED1DA1B23D00A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,15 +406,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				911E19031DA1C37A00A8AD59 /* AnalyticsManager.swift in Sources */,
-				911E19061DA1C5EB00A8AD59 /* SettingsAnalyticalRegistry.swift in Sources */,
-				433E1A792F5C39C90083F3EC /* SettingsAnalyticalRegistryTests.swift in Sources */,
 				433E1A7A2F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift in Sources */,
 				433E1A7B2F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift in Sources */,
-				911E18FF1DA1C30900A8AD59 /* FeedAnalyticalRegistry.swift in Sources */,
-				433E1A752F5C39B50083F3EC /* StubAnalyticsDelegate.swift in Sources */,
-				911E18FD1DA1C30200A8AD59 /* AnalyticalRegistry.swift in Sources */,
-				911E19051DA1C5E800A8AD59 /* ProfileAnalyticalRegistry.swift in Sources */,
+				433E1A752F5C39B50083F3EC /* StubAnalyticsEventSending.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
