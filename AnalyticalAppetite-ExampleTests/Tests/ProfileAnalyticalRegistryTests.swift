@@ -11,7 +11,7 @@ import XCTest
 @testable import AnalyticalAppetite_Example
 
 class ProfileAnalyticalRegistryTests: XCTestCase {
-    var stub: StubAnalyticsEventSending!
+    var analyticsService: StubAnalyticsEventSending!
     var sut: ProfileAnalyticalRegistry!
 
     // MARK: - Lifecycle
@@ -19,8 +19,8 @@ class ProfileAnalyticalRegistryTests: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        stub = StubAnalyticsEventSending()
-        sut = ProfileAnalyticalRegistry(service: stub)
+        analyticsService = StubAnalyticsEventSending()
+        sut = ProfileAnalyticalRegistry(service: analyticsService)
     }
 
     // MARK: - Tests
@@ -28,7 +28,7 @@ class ProfileAnalyticalRegistryTests: XCTestCase {
     func test_whenSendAvatarChangedEventIsCalled_thenEventDetailsAreCorrect() {
         sut.sendAvatarChangedEvent()
 
-        guard case let .send(event) = stub.events.first else {
+        guard case let .send(event) = analyticsService.events.first else {
             XCTFail("Expected send event")
             return
         }
@@ -48,7 +48,7 @@ class ProfileAnalyticalRegistryTests: XCTestCase {
                                    emailAddressChanged: emailAddressChanged,
                                    bioChanged: bioChanged)
 
-        guard case let .send(event) = stub.events.first else {
+        guard case let .send(event) = analyticsService.events.first else {
             XCTFail("Expected send event")
             return
         }
@@ -66,7 +66,7 @@ class ProfileAnalyticalRegistryTests: XCTestCase {
 
         sut.sendFriendRequestEvent(requested: requested)
 
-        guard case let .send(event) = stub.events.first else {
+        guard case let .send(event) = analyticsService.events.first else {
             XCTFail("Expected send event")
             return
         }
