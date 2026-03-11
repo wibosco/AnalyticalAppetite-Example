@@ -16,6 +16,8 @@
 		433E93EF2F5F5679004EDAF6 /* FeedAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E93EC2F5F5679004EDAF6 /* FeedAnalyticalRegistry.swift */; };
 		433E93F02F5F5679004EDAF6 /* ProfileAnalyticalRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E93ED2F5F5679004EDAF6 /* ProfileAnalyticalRegistry.swift */; };
 		433E93F22F5F7F6F004EDAF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433E93F12F5F7F6F004EDAF6 /* ViewController.swift */; };
+		43C62D8B2F61988300202844 /* StubMixpanelTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C62D8A2F61988300202844 /* StubMixpanelTracking.swift */; };
+		43C62D8D2F6198F300202844 /* AnalyticsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C62D8C2F6198F300202844 /* AnalyticsServiceTests.swift */; };
 		91F981211D9EBD44004C31B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F981131D9EBD44004C31B6 /* AppDelegate.swift */; };
 		91F981231D9EBD44004C31B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91F981161D9EBD44004C31B6 /* Assets.xcassets */; };
 		91F981241D9EBD44004C31B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91F981181D9EBD44004C31B6 /* LaunchScreen.storyboard */; };
@@ -42,6 +44,8 @@
 		433E93EC2F5F5679004EDAF6 /* FeedAnalyticalRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedAnalyticalRegistry.swift; sourceTree = "<group>"; };
 		433E93ED2F5F5679004EDAF6 /* ProfileAnalyticalRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAnalyticalRegistry.swift; sourceTree = "<group>"; };
 		433E93F12F5F7F6F004EDAF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		43C62D8A2F61988300202844 /* StubMixpanelTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubMixpanelTracking.swift; sourceTree = "<group>"; };
+		43C62D8C2F6198F300202844 /* AnalyticsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsServiceTests.swift; sourceTree = "<group>"; };
 		581320B53CF0CFE5FE68CFD4 /* Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AnalyticalAppetite-ExampleTests/Pods-AnalyticalAppetite-ExampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5B17F420FE17258AFBABA9C5 /* Pods_AnalyticalAppetite_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnalyticalAppetite_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		91F980ED1D9EBCA0004C31B6 /* AnalyticalAppetite-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AnalyticalAppetite-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				433E1A732F5C39B50083F3EC /* StubAnalyticsEventSending.swift */,
+				43C62D8A2F61988300202844 /* StubMixpanelTracking.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -111,6 +116,7 @@
 			children = (
 				433E1A762F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift */,
 				433E1A772F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift */,
+				43C62D8C2F6198F300202844 /* AnalyticsServiceTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -406,9 +412,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C62D8B2F61988300202844 /* StubMixpanelTracking.swift in Sources */,
 				433E1A7A2F5C39C90083F3EC /* ProfileAnalyticalRegistryTests.swift in Sources */,
 				433E1A7B2F5C39C90083F3EC /* FeedAnalyticalRegistryTests.swift in Sources */,
 				433E1A752F5C39B50083F3EC /* StubAnalyticsEventSending.swift in Sources */,
+				43C62D8D2F6198F300202844 /* AnalyticsServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

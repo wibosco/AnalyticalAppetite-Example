@@ -10,10 +10,10 @@ import Foundation
 
 struct AnalyticsEvent {
     let name: String
-    let properties: [String: Any]
+    let properties: [String: Any]?
 
     init(name: String,
-         properties: [String: Any] = [:]) {
+         properties: [String: Any]? = nil) {
         self.name = name
         self.properties = properties
     }

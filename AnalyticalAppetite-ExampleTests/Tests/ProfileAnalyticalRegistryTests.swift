@@ -27,14 +27,16 @@ class ProfileAnalyticalRegistryTests: XCTestCase {
 
     func test_whenSendAvatarChangedEventIsCalled_thenEventDetailsAreCorrect() {
         sut.sendAvatarChangedEvent()
-
+        
+        XCTAssertEqual(analyticsService.events.count, 1)
+        
         guard case let .send(event) = analyticsService.events.first else {
             XCTFail("Expected send event")
             return
         }
 
         XCTAssertEqual(event.name, "Avatar Changed")
-        XCTAssertTrue(event.properties.isEmpty)
+        XCTAssertNil(event.properties)
     }
 
     func test_whenSendFieldsChangedEventIsCalled_thenEventDetailsAreCorrect() {
@@ -42,23 +44,25 @@ class ProfileAnalyticalRegistryTests: XCTestCase {
         let lastNameChanged = true
         let emailAddressChanged = false
         let bioChanged = true
-
+        
         sut.sendFieldsChangedEvent(firstNameChanged: firstNameChanged,
                                    lastNameChanged: lastNameChanged,
                                    emailAddressChanged: emailAddressChanged,
                                    bioChanged: bioChanged)
 
+        XCTAssertEqual(analyticsService.events.count, 1)
+        
         guard case let .send(event) = analyticsService.events.first else {
             XCTFail("Expected send event")
             return
         }
 
         XCTAssertEqual(event.name, "Profile Fields")
-        XCTAssertEqual(event.properties["First Name Changed"] as? Bool, firstNameChanged)
-        XCTAssertEqual(event.properties["Last Name Changed"] as? Bool, lastNameChanged)
-        XCTAssertEqual(event.properties["Email Address Changed"] as? Bool, emailAddressChanged)
-        XCTAssertEqual(event.properties["Bio Changed"] as? Bool, bioChanged)
-        XCTAssertEqual(event.properties["Total Fields Changed"] as? Int, 3)
+        XCTAssertEqual(event.properties?["First Name Changed"] as? Bool, firstNameChanged)
+        XCTAssertEqual(event.properties?["Last Name Changed"] as? Bool, lastNameChanged)
+        XCTAssertEqual(event.properties?["Email Address Changed"] as? Bool, emailAddressChanged)
+        XCTAssertEqual(event.properties?["Bio Changed"] as? Bool, bioChanged)
+        XCTAssertEqual(event.properties?["Total Fields Changed"] as? Int, 3)
     }
 
     func test_whenSendFriendRequestEventIsCalled_thenEventDetailsAreCorrect() {
@@ -66,12 +70,14 @@ class ProfileAnalyticalRegistryTests: XCTestCase {
 
         sut.sendFriendRequestEvent(requested: requested)
 
+        XCTAssertEqual(analyticsService.events.count, 1)
+        
         guard case let .send(event) = analyticsService.events.first else {
             XCTFail("Expected send event")
             return
         }
 
         XCTAssertEqual(event.name, "Friend Request")
-        XCTAssertEqual(event.properties["Friend Requested"] as? Bool, requested)
+        XCTAssertEqual(event.properties?["Friend Requested"] as? Bool, requested)
     }
 }

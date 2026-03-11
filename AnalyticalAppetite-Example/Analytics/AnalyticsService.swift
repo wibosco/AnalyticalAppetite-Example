@@ -13,12 +13,18 @@ protocol AnalyticsEventSending {
     func send(_ event: AnalyticsEvent)
 }
 
+protocol MixpanelTracking {
+    func track(_ event: String, properties: [AnyHashable : Any]?)
+}
+
+extension Mixpanel: MixpanelTracking { }
+
 class AnalyticsService: AnalyticsEventSending {
-    private let mixpanel: Mixpanel
+    private let mixpanel: MixpanelTracking
     
     // MARK: - Init
     
-    init(mixpanel: Mixpanel) {
+    init(mixpanel: MixpanelTracking) {
         self.mixpanel = mixpanel
     }
     
