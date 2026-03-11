@@ -39,7 +39,7 @@ class FeedAnalyticalRegistryTests: XCTestCase {
         XCTAssertNil(event.properties)
     }
 
-    func test_whenSendLikeEventIsCalled_thenEventDetailsAreCorrect() {
+    func test_givenLikedIsTrue_whenSendLikeEventIsCalled_thenEventDetailsAreCorrect() {
         let liked = true
 
         sut.sendLikeEvent(liked: liked)
@@ -54,9 +54,41 @@ class FeedAnalyticalRegistryTests: XCTestCase {
         XCTAssertEqual(event.name, "Post Liked")
         XCTAssertEqual(event.properties?["Liked"] as? Bool, liked)
     }
+    
+    func test_givenLikedIsFalse_whenSendLikeEventIsCalled_thenEventDetailsAreCorrect() {
+        let liked = false
 
-    func test_whenSendSharedEventIsCalled_thenEventDetailsAreCorrect() {
+        sut.sendLikeEvent(liked: liked)
+        
+        XCTAssertEqual(analyticsService.events.count, 1)
+        
+        guard case let .send(event) = analyticsService.events.first else {
+            XCTFail("Expected send event")
+            return
+        }
+
+        XCTAssertEqual(event.name, "Post Liked")
+        XCTAssertEqual(event.properties?["Liked"] as? Bool, liked)
+    }
+
+    func test_givenSharedIsTrue_whenSendSharedEventIsCalled_thenEventDetailsAreCorrect() {
         let shared = true
+
+        sut.sendSharedEvent(shared: shared)
+
+        XCTAssertEqual(analyticsService.events.count, 1)
+        
+        guard case let .send(event) = analyticsService.events.first else {
+            XCTFail("Expected send event")
+            return
+        }
+
+        XCTAssertEqual(event.name, "Post Shared")
+        XCTAssertEqual(event.properties?["Shared"] as? Bool, shared)
+    }
+    
+    func test_givenSharedIsFalse_whenSendSharedEventIsCalled_thenEventDetailsAreCorrect() {
+        let shared = false
 
         sut.sendSharedEvent(shared: shared)
 
